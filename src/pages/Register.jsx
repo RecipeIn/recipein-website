@@ -15,14 +15,14 @@ function Register() {
                 <div className='item-body px-[200px] pt-2  text-font'>
                     <div className='flex'>
                     <img src={logo} className='w-[75px] h-[75px]'/>
-                    <p className='text-[38px] mt-2 ml-2 font-bold'>RecipeIn</p>
+                    <p className='text-[38px] mt-2 ml-2 font-extrabold'>RecipeIn</p>
                     </div>
-                    <p className='text-[28px]  font-bold pt-8'>Daftar</p>
+                    <p className='text-[28px]  font-extrabold pt-8'>Daftar</p>
                     <p className='text-lg'>Silakan masukkan data anda</p>
                     <label for="name" className="block text-base font-bold justify-center pt-2 pb-1">Nama Pengguna</label>
                     <input type="text" id="name" className="bg-field w-[400px] h-[50px]  text-base rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black" placeholder="Masukkan nama pengguna" required></input>
                     <label for="email" className="block text-base font-bold justify-center pt-2 pb-1">Email</label>
-                    <input type="text" id="email" className="bg-field w-[400px] h-[50px]  text-base rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black" placeholder="Masukkan email" required></input>
+                    <input type="email" id="email" className="bg-field w-[400px] h-[50px]  text-base rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black" placeholder="Masukkan email" required></input>
                     <label for="password" className="block text-base font-bold justify-center pt-2 pb-1">Kata Sandi</label>
                     <input type="password" id="password" className="bg-field w-[400px] h-[50px]  text-base rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black" placeholder="Masukkan kata sandi" required></input>
                     <label for="cpassword" className="block text-base font-bold justify-center pt-2 pb-1">Konfirmasi Kata Sandi</label>
