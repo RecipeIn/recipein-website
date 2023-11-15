@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from "react-router-dom";
 import bg from "../assets/img/bg.png"
 
-function Login() {
+function Register() {
     return (
         <>
         <section className="body-font font-nunito w-screen h-auto">
@@ -42,4 +42,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Register
