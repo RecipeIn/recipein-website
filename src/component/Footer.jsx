@@ -15,10 +15,10 @@ function Footer() {
             <div className="md:flex md:justify-between px-4">
                 <div className="ml-8 mt-4">
                     <a href="#" className="flex items-center">
-                        <img src={logo} className="h-28" alt="RecipeIn Logo" />
+                        <img src={logo} className="h-24" alt="RecipeIn Logo" />
                         <p className='text-[38px] mt-2 ml-2 text-font font-extrabold'>RecipeIn</p>
                     </a>
-                    <p className='text-2xl lg:w-[282px] pt-4'>"BE THE CHEF OF YOUR KITCHEN"</p>
+                    <p className='text-2xl lg:w-[282px] pt-4 italic tracking-wider'>"Discover, Cook, Savor"</p>
                 </div>
                 <div className="grid grid-cols-2 gap-8 sm:gap-12 sm:grid-cols-2 mt-8 text-font">
                     <div>
