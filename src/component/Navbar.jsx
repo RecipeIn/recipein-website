@@ -9,12 +9,12 @@ import { AiOutlineUser } from "react-icons/ai";
 function Navbar() {
     return (
       <>
-        <div className='w-screen h-[100px] bg-primary lg:px-16 px-6'>
+        <div className='w-screen h-[100px]  bg-primary lg:px-16 px-6'>
           <div className='lg:w-full lg:flex lg:item-center lg:justify-between w-full h-full'>
               <div className='lg:flex lg:justify-start lg:gap-8 h-full flex justify-between items-center'>
                   <div className='w-[75px] h-auto inline-flex'>
                       <img src={logo} alt="" /> 
-                      <p className='text-[38px] mt-2 ml-2 font-extrabold'>RecipeIn</p>
+                      <p className='text-[38px] mt-2 ml-2 text-font font-extrabold'>RecipeIn</p>
                   </div>
                   {/* <div>
                     test
