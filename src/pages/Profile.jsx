@@ -4,7 +4,6 @@ import Navbar from '../component/Navbar';
 import Footer from '../component/Footer'
 import profile from "../assets/img/profile.jpg"
 import { MdNavigateNext } from "react-icons/md";
-import { RiImageEditLine } from "react-icons/ri";
 
 function EditProfile() {
     return (
