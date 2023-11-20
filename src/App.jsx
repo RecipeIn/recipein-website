@@ -10,7 +10,6 @@ import Profile from './pages/Profile'
 import EditProfile from './pages/EditProfile'
 import DailyNutrition from './pages/DailyNutrition'
 import Homepage from './pages/Homepage'
-import Mangeak from './pages/Mangeak'
 
 
 function App() {
