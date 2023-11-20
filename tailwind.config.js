@@ -8,9 +8,11 @@ export default {
     extend: {
       colors: {
         primary: '#FFD32D',
-        secondary: '#3F5D97',
-        font: '#4D4D4D',
-        field: '#E6E6E6'
+        secondary: '#1E2C48',
+        font: '#111111',
+        field: '#E6E6E6',
+        putih: '#FFFEFE',
+        abu: '#4D4D4D'
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],

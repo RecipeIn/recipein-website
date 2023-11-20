@@ -9,20 +9,23 @@ import NewPass from './pages/NewPass'
 import Profile from './pages/Profile'
 import EditProfile from './pages/EditProfile'
 import DailyNutrition from './pages/DailyNutrition'
+import Homepage from './pages/Homepage'
+import Mangeak from './pages/Mangeak'
+
 
 function App() {
 
   return (
     <Routes>
-      <Route index element={<Register />} /> 
+      <Route index element={<Homepage />} /> 
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/forgotpass" element={<ForgotPass />} />
       <Route path="/verif" element={<Verification />} />
       <Route path="/newpass" element={<NewPass />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/edit" element={<EditProfile />} />
       <Route path="/dnutrition" element={<DailyNutrition />} />
-      {/* <Route path="/register" element={<Register />} /> */}
     </Routes>
   )
 }
