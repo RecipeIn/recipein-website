@@ -7,6 +7,13 @@ import { MdNavigateNext } from "react-icons/md";
 import { RiImageEditLine } from "react-icons/ri";
 
 function EditProfile() {
+    const [selectedFile, setSelectedFile] = useState(null);
+
+    const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setSelectedFile(file);
+    };
+
     return (
         <>
         <section className='body-font font-nunito w-screen h-[1358px]'>
@@ -23,27 +30,27 @@ function EditProfile() {
                         <ul className="ml-10">
                             <li className='bg-[#DBE2F0] mt-4 rounded-[8px] w-[300px] h-[40px] inline-flex justify-between border-none'>
                                 <a href="/resepku" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Resep Ku</a>
-                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#4D4D4D'/>
+                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-[#DBE2F0] mt-4 rounded-[8px] w-[300px] h-[40px] inline-flex justify-between border-none'>
                                 <a href="/favorit" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Favorite</a>
-                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#4D4D4D'/>
+                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-[#DBE2F0] mt-4 rounded-[8px] w-[300px] h-[40px] inline-flex justify-between border-none'>
                                 <a href="/nutrisi" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Nutrisi Harian</a>
-                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#4D4D4D'/>
+                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-[#DBE2F0] mt-4 rounded-[8px] w-[300px] h-[40px] inline-flex justify-between border-none'>
                                 <a href="/edit" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Sunting Profile</a>
-                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#4D4D4D'/>
+                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-[#DBE2F0] mt-4 rounded-[8px] w-[300px] h-[40px] inline-flex justify-between border-none'>
                                 <a href="/newpass" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Ubah Kata Sandi</a>
-                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#4D4D4D'/>
+                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-[#DBE2F0] mt-4 rounded-[8px] w-[300px] h-[40px] inline-flex justify-between border-none'>
                                 <a href="/logout" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Keluar</a>
-                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#4D4D4D'/>
+                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                         </ul>
                     </div>
@@ -76,9 +83,15 @@ function EditProfile() {
                             <img className=" w-[250px] h-[250px] rounded-none mt-8" src={profile} alt=""/>
                         </div>
                         <div className='bg-[#D9D9D9] w-[44px] h-[44px] rounded-full -ml-14 mt-10'>
-                            <Link to="/profile">
-                                <RiImageEditLine color='#4D4D4D' fontSize="45px" className='py-2 px-2'/>
-                            </Link>
+                            <label htmlFor="fileInput" className="cursor-pointer text-white py-2 px-4 rounded-md">
+                            <RiImageEditLine color='#111111' fontSize="45px" className='py-2 px-2 -mt-6'/>
+                            </label>
+                            <input
+                            id="fileInput"
+                            type="file"
+                            className="hidden"
+                            onChange={handleFileChange}
+                            />
                         </div>
                     </div>
                     <div className='ml-8 -mt-32 flex'>

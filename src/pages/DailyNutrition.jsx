@@ -10,7 +10,7 @@ import { IoInformationCircle } from "react-icons/io5";
 function DailyNutrition() {
     return (
         <>
-        <section className='body-font font-nunito w-screen h-[1358px] overflow-hidden'>
+        <section className='body-font font-nunito w-screen h-[1358px]'>
             <Navbar />
             
             <div className='flex justify-between mt-8 mb-[150px]'>
@@ -24,27 +24,27 @@ function DailyNutrition() {
                         <ul className="ml-10">
                             <li className='bg-[#DBE2F0] mt-4 rounded-[8px] w-[300px] h-[40px] inline-flex justify-between border-none'>
                                 <a href="/resepku" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Resep Ku</a>
-                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#4D4D4D'/>
+                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-[#DBE2F0] mt-4 rounded-[8px] w-[300px] h-[40px] inline-flex justify-between border-none'>
                                 <a href="/favorit" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Favorite</a>
-                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#4D4D4D'/>
+                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-[#DBE2F0] mt-4 rounded-[8px] w-[300px] h-[40px] inline-flex justify-between border-none'>
                                 <a href="/nutrisi" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Nutrisi Harian</a>
-                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#4D4D4D'/>
+                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-[#DBE2F0] mt-4 rounded-[8px] w-[300px] h-[40px] inline-flex justify-between border-none'>
                                 <a href="/edit" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Sunting Profile</a>
-                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#4D4D4D'/>
+                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-[#DBE2F0] mt-4 rounded-[8px] w-[300px] h-[40px] inline-flex justify-between border-none'>
                                 <a href="/newpass" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Ubah Kata Sandi</a>
-                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#4D4D4D'/>
+                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-[#DBE2F0] mt-4 rounded-[8px] w-[300px] h-[40px] inline-flex justify-between border-none'>
                                 <a href="/logout" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Keluar</a>
-                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#4D4D4D'/>
+                                <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                         </ul>
                     </div>
