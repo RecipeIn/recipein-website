@@ -16,12 +16,12 @@ import { TbStarFilled } from "react-icons/tb";
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 
 
-const popularCategory =[
-    {
-        name: "SARAPAN",
-        icon: "../assets/img/breakfast.png"
-    }
-]
+// const popularCategory =[
+//     {
+//         name: "SARAPAN",
+//         icon: "../assets/img/breakfast.png"
+//     }
+// ]
 const weeklyMeals = [
     {
         category: "Salad",
@@ -202,7 +202,7 @@ function Homepage() {
                 <p className='w-[500px] absolute top-[400px] ml-12 text-[28px] font-medium text-white tracking-wide'>Dari Sarapan hingga Makan Malam, Kami Siap Membantu Anda</p>
                 <ul className="absolute top-[510px] ml-12">
                     <li className='bg-primary rounded-[4px] w-[178px] h-[45px] inline-flex justify-between border-none'>
-                        <a href="/resep" className="ml-4 mt-2 text-secondary text-[18px] font-bold hover:text-secondary">Jelajahi Resep</a>
+                        <a href="/recipe" className="ml-4 mt-2 text-secondary text-[18px] font-bold hover:text-secondary">Jelajahi Resep</a>
                         <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color="#1E2C48"/>
                     </li>
                 </ul>
@@ -211,7 +211,7 @@ function Homepage() {
                 <p className='text-font font-extrabold text-[48px] mt-8 ml-16 mb-8'>Kategori Populer</p>
                 <div className='inline-flex'>
                     <div className='flex flex-col ml-[70px]'>
-                        <Link to="/category">
+                        <Link to="/pcategory">
                         <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl'>
                             <img src={sarapan} className='mt-6 ml-3'/>
                         </div>
@@ -270,12 +270,12 @@ function Homepage() {
                     </div>
                 </div>
             </div>
-            <div className='mb-16 ml-16'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12'>Rekomendasi Makanan Mingguan</p>
-                <div className='inline-flex -ml-4'>
+            <div className='mb-16 ml-12'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Rekomendasi Makanan Mingguan</p>
+                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
                 {weeklyMeals.map((weeklyMeals) => (
                     
-                    <div className='rounded-[8px] bg-white w-[323px] h-[400px] shadow-xl ml-12'>
+                    <div className='rounded-[8px] bg-white w-[323px] h-[400px] shadow-xl '>
                         <Link to="/detail"><img src={weeklyMeals.photo} className='rounded-[8px]'/></Link>
                         <div className='ml-[268px] -mt-[176px] relative z-20'>
                         <button className={`w-[44px] h-[44px] rounded-full cursor-pointer bg-primary items-center py-2.5 px-2.5 ${
@@ -288,9 +288,7 @@ function Homepage() {
                         <Link to="/detail">
                         <p className='text-secondary text-[16px] font-bold ml-5 mt-[145px]'>{weeklyMeals.category}</p>
                         <p className='text-font text-[26px] font-bold ml-5'>{weeklyMeals.name}</p>
-                        <Link to='/viewprofile'>
-                        <p className='text-[#4D4D4D] text-[18px] font-light ml-5'>Oleh {weeklyMeals.creatorName}</p>
-                        </Link>
+                        <Link to="/viewprofile"><p className='text-[#4D4D4D] text-[18px] font-light ml-5'>Oleh {weeklyMeals.creatorName}</p></Link>
                         <div className='inline-flex mt-[74px] ml-4'>
                             <IoMdTime color='#AAAAAA' fontSize="24px" />
                             <p className='text-[18px] font-light text-[#4D4D4D]'>{weeklyMeals.estTime} mnt</p>
@@ -299,16 +297,15 @@ function Homepage() {
                         </div>
                         </Link>
                     </div>
-                    
                 ))}
                 </div>
             </div>
-            <div className='mb-16 ml-16'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12'>Rekomendasi Minuman Mingguan</p>
-                <div className='inline-flex -ml-4'>
+            <div className='mb-16 ml-12'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Rekomendasi Minuman Mingguan</p>
+                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
                 {weeklyDrinks.map((weeklyDrinks) => (
                     
-                    <div className='rounded-[8px] bg-white w-[323px] h-[400px] shadow-xl ml-12'>
+                    <div className='rounded-[8px] bg-white w-[323px] h-[400px] shadow-xl '>
                         <Link to="/detail"><img src={weeklyDrinks.photo} className='rounded-[8px]'/></Link>
                         <div className='ml-[268px] -mt-[176px] relative z-20'>
                         <button className={`w-[44px] h-[44px] rounded-full cursor-pointer bg-primary items-center py-2.5 px-2.5 ${
@@ -321,7 +318,7 @@ function Homepage() {
                         <Link to="/detail">
                         <p className='text-secondary text-[16px] font-bold ml-5 mt-[145px]'>{weeklyDrinks.category}</p>
                         <p className='text-font text-[26px] font-bold ml-5'>{weeklyDrinks.name}</p>
-                        <Link to="/viewprofile"><p className='text-[#4D4D4D] text-[18px] font-light ml-5'>By {weeklyDrinks.creatorName}</p></Link>
+                        <Link to="/viewprofile"><p className='text-[#4D4D4D] text-[18px] font-light ml-5'>Oleh {weeklyDrinks.creatorName}</p></Link>
                         <div className='inline-flex mt-[74px] ml-4'>
                             <IoMdTime color='#AAAAAA' fontSize="24px" />
                             <p className='text-[18px] font-light text-[#4D4D4D]'>{weeklyDrinks.estTime} mnt</p>
@@ -382,8 +379,9 @@ function Homepage() {
                 ))}
                 </div>
             </div>
+
             <div className='flex ml-[730px]'>
-            <Link to="/resep">
+            <Link to="/recipe">
             <div className='justify-center border border-primary w-[158px] h-[40px] rounded-[4px] mb-20 cursor-pointer'>
                 <p className='text-secondary text-[18px] font-bold text-center mt-1'>Lebih Banyak</p>
             </div>
