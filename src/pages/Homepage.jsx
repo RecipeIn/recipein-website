@@ -34,7 +34,7 @@ const weeklyMeals = [
     {
         category: "Nasi Goreng",
         name: "Nasi Goreng Udang",
-        creatorName: "Dapur Amanda",
+        creatorName: "Dapur Sasa",
         rating: "4.7",
         estTime: 30,
         photo: "/src/assets/img/nasi-goreng-udang.png"
@@ -42,15 +42,15 @@ const weeklyMeals = [
     {
         category: "Soto Daging",
         name: "Soto Betawi",
-        creatorName: "Dapur Amanda",
+        creatorName: "Dapur Ika",
         rating: "4.8",
         estTime: 45,
         photo: "/src/assets/img/soto-betawi.png"
     },
     {
         category: "Bakso",
-        name: "Bakso Dagin Sapi",
-        creatorName: "Dapur Amanda",
+        name: "Bakso Daging Sapi",
+        creatorName: "Dapur Rere",
         rating: "4.6",
         estTime: 75,
         photo: "/src/assets/img/bakso.png"
@@ -59,36 +59,36 @@ const weeklyMeals = [
 
 const weeklyDrinks = [
     {
-        category: "Roti",
-        name: "Donat Kentang",
+        category: "Smoothie",
+        name: "Smoothie Kiwi",
         creatorName: "Dapur Amanda",
-        rating: "4.5",
-        estTime: 15,
-        photo: "/src/assets/img/donat.png"
+        rating: "4.6",
+        estTime: 20,
+        photo: "/src/assets/img/smoothie-kiwi.png"
     },
     {
-        category: "Roti",
-        name: "Donat Kentang",
-        creatorName: "Dapur Amanda",
-        rating: "4.5",
-        estTime: 15,
-        photo: "/src/assets/img/donat.png"
+        category: "Kopi",
+        name: "Kopi Frappe Coklat",
+        creatorName: "Dapur Ika",
+        rating: "4.7",
+        estTime: 26,
+        photo: "/src/assets/img/frappe-kopi.png"
     },
     {
-        category: "Roti",
-        name: "Donat Kentang",
-        creatorName: "Dapur Amanda",
-        rating: "4.5",
-        estTime: 15,
-        photo: "/src/assets/img/donat.png"
+        category: "Coklat",
+        name: "Coklat Panas",
+        creatorName: "Dapur Sasa",
+        rating: "4.3",
+        estTime: 8,
+        photo: "/src/assets/img/coklat-panas.png"
     },
     {
-        category: "Roti",
-        name: "Donat Kentang",
-        creatorName: "Dapur Amanda",
-        rating: "4.5",
+        category: "Es Teh",
+        name: "Es Teh Persik",
+        creatorName: "Dapur Rere",
+        rating: "4.8",
         estTime: 15,
-        photo: "/src/assets/img/donat.png"
+        photo: "/src/assets/img/es-teh.png"
     },
 ]
 
@@ -112,7 +112,7 @@ const collection = [
         photo: "/src/assets/img/nasi-goreng.png"
     },
     {
-        name: "KUMPULAN RESEP BAKSO",
+        name: "KUMPULAN RESEP BAKSO DAGING",
         by: "Dapur Amanda",
         total: 106,
         photo: "/src/assets/img/bakso2.png"
@@ -121,68 +121,68 @@ const collection = [
 
 const newRecipe = [
     {
-        category: "Roti",
-        name: "Donat Kentang",
+        category: "Ayam",
+        name: "Ayam Bakar Kemangi",
         creatorName: "Dapur Amanda",
-        rating: "4.5",
-        estTime: 15,
-        photo: "/src/assets/img/donat.png"
+        rating: "4.3",
+        estTime: 55,
+        photo: "/src/assets/img/ayam-bakar.png"
     },
     {
-        category: "Roti",
-        name: "Donat Kentang",
-        creatorName: "Dapur Amanda",
-        rating: "4.5",
-        estTime: 15,
-        photo: "/src/assets/img/donat.png"
+        category: "Ayam",
+        name: "Ayam Kecap",
+        creatorName: "Dapur Rere",
+        rating: "3.9",
+        estTime: 70,
+        photo: "/src/assets/img/ayam-kecap.png"
     },
     {
-        category: "Roti",
-        name: "Donat Kentang",
-        creatorName: "Dapur Amanda",
-        rating: "4.5",
-        estTime: 15,
-        photo: "/src/assets/img/donat.png"
+        category: "Ayam",
+        name: "Kari Ayam",
+        creatorName: "Dapur Sasa",
+        rating: "4.6",
+        estTime: 65,
+        photo: "/src/assets/img/kari-ayam.png"
     },
     {
-        category: "Roti",
-        name: "Donat Kentang",
-        creatorName: "Dapur Amanda",
-        rating: "4.5",
-        estTime: 15,
-        photo: "/src/assets/img/donat.png"
+        category: "Sop",
+        name: "Sop Ayam",
+        creatorName: "Dapur Ika",
+        rating: "4.7",
+        estTime: 45,
+        photo: "/src/assets/img/sop-ayam.png"
     },
     {
-        category: "Roti",
-        name: "Donat Kentang",
+        category: "Mie",
+        name: "Bakmie Goreng Jawa",
         creatorName: "Dapur Amanda",
-        rating: "4.5",
-        estTime: 15,
-        photo: "/src/assets/img/donat.png"
+        rating: "4.3",
+        estTime: 40,
+        photo: "/src/assets/img/bakmie-jawa.png"
     },
     {
-        category: "Roti",
-        name: "Donat Kentang",
-        creatorName: "Dapur Amanda",
-        rating: "4.5",
-        estTime: 15,
-        photo: "/src/assets/img/donat.png"
+        category: "Mie",
+        name: "Mie Level",
+        creatorName: "Dapur Sasa",
+        rating: "4.1",
+        estTime: 35,
+        photo: "/src/assets/img/mie-level.png"
     },
     {
-        category: "Roti",
-        name: "Donat Kentang",
-        creatorName: "Dapur Amanda",
-        rating: "4.5",
-        estTime: 15,
-        photo: "/src/assets/img/donat.png"
+        category: "Bakso",
+        name: "Bakso Tusuk Pedas",
+        creatorName: "Dapur Rere",
+        rating: "4.8",
+        estTime: 35,
+        photo: "/src/assets/img/bakso-tusuk.png"
     },
     {
-        category: "Roti",
-        name: "Donat Kentang",
-        creatorName: "Dapur Amanda",
-        rating: "4.5",
-        estTime: 15,
-        photo: "/src/assets/img/donat.png"
+        category: "Daging",
+        name: "Sate Daging Kambing",
+        creatorName: "Dapur Ika",
+        rating: "4.4",
+        estTime: 80,
+        photo: "/src/assets/img/sate-kambing.png"
     },
 ]
 
@@ -211,12 +211,14 @@ function Homepage() {
                 <p className='text-font font-extrabold text-[48px] mt-8 ml-16 mb-8'>Kategori Populer</p>
                 <div className='inline-flex'>
                     <div className='flex flex-col ml-[70px]'>
+                        <Link to="/category">
                         <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl'>
                             <img src={sarapan} className='mt-6 ml-3'/>
                         </div>
                         <div>
                         <p className='text-[20px] font-medium text-font mt-8 ml-8 mb-4'>SARAPAN</p>
                         </div>
+                        </Link>
                     </div>
                     <div className='flex flex-col ml-16'>
                         <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl'>
@@ -286,7 +288,9 @@ function Homepage() {
                         <Link to="/detail">
                         <p className='text-secondary text-[16px] font-bold ml-5 mt-[145px]'>{weeklyMeals.category}</p>
                         <p className='text-font text-[26px] font-bold ml-5'>{weeklyMeals.name}</p>
+                        <Link to='/viewprofile'>
                         <p className='text-[#4D4D4D] text-[18px] font-light ml-5'>Oleh {weeklyMeals.creatorName}</p>
+                        </Link>
                         <div className='inline-flex mt-[74px] ml-4'>
                             <IoMdTime color='#AAAAAA' fontSize="24px" />
                             <p className='text-[18px] font-light text-[#4D4D4D]'>{weeklyMeals.estTime} mnt</p>
@@ -317,7 +321,7 @@ function Homepage() {
                         <Link to="/detail">
                         <p className='text-secondary text-[16px] font-bold ml-5 mt-[145px]'>{weeklyDrinks.category}</p>
                         <p className='text-font text-[26px] font-bold ml-5'>{weeklyDrinks.name}</p>
-                        <p className='text-[#4D4D4D] text-[18px] font-light ml-5'>By {weeklyDrinks.creatorName}</p>
+                        <Link to="/viewprofile"><p className='text-[#4D4D4D] text-[18px] font-light ml-5'>By {weeklyDrinks.creatorName}</p></Link>
                         <div className='inline-flex mt-[74px] ml-4'>
                             <IoMdTime color='#AAAAAA' fontSize="24px" />
                             <p className='text-[18px] font-light text-[#4D4D4D]'>{weeklyDrinks.estTime} mnt</p>
@@ -338,7 +342,7 @@ function Homepage() {
                         <img src={collection.photo} className='rounded-[8px]'/>
                         <p className='text-font text-[30px] w-[428px] font-bold mt-4 ml-5'>{collection.name}</p>
                         <div className='inline-flex'>
-                            <p className='text-[#4D4D4D] text-[20px] ml-5 mt-8'>Oleh {collection.by}</p>
+                            <Link to="/viewprofile"><p className='text-[#4D4D4D] text-[20px] ml-5 mt-8'>Oleh {collection.by}</p></Link>
                             <div className='border border-[#3F5D97] w-[123px] h-[40px] rounded-[4px] mt-7 ml-72'>
                             <p className='text-[#3F5D97] text-[16px] font-bold text-center mt-2'>{collection.total} Resep</p>
                             </div>
@@ -366,7 +370,7 @@ function Homepage() {
                         <Link to="/detail">
                         <p className='text-secondary text-[16px] font-bold ml-5 mt-[145px]'>{newRecipe.category}</p>
                         <p className='text-font text-[26px] font-bold ml-5'>{newRecipe.name}</p>
-                        <p className='text-[#4D4D4D] text-[18px] font-light ml-5'>Oleh {newRecipe.creatorName}</p>
+                        <Link to="/viewprofile"><p className='text-[#4D4D4D] text-[18px] font-light ml-5'>Oleh {newRecipe.creatorName}</p></Link>
                         <div className='inline-flex mt-[74px] ml-4'>
                             <IoMdTime color='#AAAAAA' fontSize="24px" />
                             <p className='text-[18px] font-light text-[#4D4D4D]'>{newRecipe.estTime} mnt</p>
