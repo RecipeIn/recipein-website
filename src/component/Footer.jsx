@@ -18,7 +18,7 @@ function Footer() {
                         <img src={logo} className="h-24" alt="RecipeIn Logo" />
                         <p className='text-[38px] mt-2 ml-2 text-font font-extrabold'>RecipeIn</p>
                     </a>
-                    <p className='text-2xl text-font pt-4 italic tracking-wider'>"Discover, Cook, Savor"</p>
+                    <p className='text-2xl text-font pt-4 italic tracking-wider'>"Temukan, Masak, Nikmati"</p>
                 </div>
                 <div className="grid grid-cols-2 gap-8 sm:gap-12 sm:grid-cols-2 mt-8 text-font">
                     <div>
@@ -68,9 +68,9 @@ function Footer() {
                 </div>
             </div>
             <hr className="border-[1px] border-font -ml-4 mt-8 w-screen" />
-            <div className="flex -ml-8 h-[70px] bg-primary w-screen justify-between">
+            <div className="flex -ml-4 h-[70px] bg-primary w-screen justify-between">
                 <p className='text-font text-base font-medium pt-[24px] ml-8'>&copy; 2023 RecipeIn - All right Reserved</p>
-                <div className='flex pt-[20px] mr-8'>
+                <div className='flex pt-[20px] mr-12'>
                     <a href="https://www.facebook.com/RecipeIn"><BiLogoFacebook color='#111111' fontSize="30px" className='' /></a>
                     <a href="https://www.instagram.com/RecipeIn"><BiLogoInstagram color='#111111' fontSize="30px" className='' /></a>
                     <a href="https://id.pinterest.com/RecipeIn/"><BiLogoPinterestAlt color='#111111' fontSize="30px" className='' /></a>
