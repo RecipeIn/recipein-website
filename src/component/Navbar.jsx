@@ -29,7 +29,7 @@ function Navbar() {
                         <Link to="/" className="text-[20px] text-font font-bold hover:text-font">BERANDA</Link>
                         <Link to="/resep" className="text-[20px] text-font font-bold hover:text-font">RESEP</Link>
                         <Link to="/diet" className="text-[20px] text-font font-bold hover:text-font">MENU SEHAT</Link>
-                        <Link to="/tentang" className="text-[20px] text-font font-bold hover:text-font">TENTANG KAMI</Link>
+                        <Link to="/about" className="text-[20px] text-font font-bold hover:text-font">TENTANG KAMI</Link>
                       </div>
   
                       <img src="/solutions.jpg" alt="" />

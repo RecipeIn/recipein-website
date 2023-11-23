@@ -27,7 +27,7 @@ function Footer() {
                         </h2>
                         <ul className="">
                             <li className="mb-2">
-                                <a href="/tentang" className="text-font text-[18px] hover:text-font">Tentang Kami</a>
+                                <a href="/about" className="text-font text-[18px] hover:text-font">Tentang Kami</a>
                             </li>
                             <li className="mb-2">
                                 <a href="/sk" className="text-font text-[18px] hover:text-font">Syarat dan Ketentuan</a>

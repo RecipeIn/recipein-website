@@ -15,6 +15,7 @@ import Diet from './pages/Diet'
 import PopularCategory from './pages/PopularCategory'
 import ViewProfile from './pages/ViewProfile'
 import DetailRecipe from './pages/DetailRecipe'
+import AboutUs from './pages/AboutUs'
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
       <Route path="/pcategory" element={<PopularCategory />} />
       <Route path="/viewprofile" element={<ViewProfile />} />
       <Route path="/detail" element={<DetailRecipe />} />
+      <Route path="/about" element={<AboutUs />} />
     </Routes>
   )
 }
