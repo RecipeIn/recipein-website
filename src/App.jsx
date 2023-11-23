@@ -10,6 +10,11 @@ import Profile from './pages/Profile'
 import EditProfile from './pages/EditProfile'
 import DailyNutrition from './pages/DailyNutrition'
 import Homepage from './pages/Homepage'
+import Recipe from './pages/Recipe'
+import Diet from './pages/Diet'
+import PopularCategory from './pages/PopularCategory'
+import ViewProfile from './pages/ViewProfile'
+import DetailRecipe from './pages/DetailRecipe'
 
 
 function App() {
@@ -25,6 +30,11 @@ function App() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/edit" element={<EditProfile />} />
       <Route path="/dnutrition" element={<DailyNutrition />} />
+      <Route path="/recipe" element={<Recipe />} />
+      <Route path="/diet" element={<Diet />} />
+      <Route path="/pcategory" element={<PopularCategory />} />
+      <Route path="/viewprofile" element={<ViewProfile />} />
+      <Route path="/detail" element={<DetailRecipe />} />
     </Routes>
   )
 }
