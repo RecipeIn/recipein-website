@@ -28,7 +28,7 @@ function Navbar() {
                       <div className="grid grid-cols-2">
                         <Link to="/" className="text-[20px] text-font font-bold hover:text-font">BERANDA</Link>
                         <Link to="/resep" className="text-[20px] text-font font-bold hover:text-font">RESEP</Link>
-                        <Link to="/diet" className="text-[20px] text-font font-bold hover:text-font">DIET SEHAT</Link>
+                        <Link to="/diet" className="text-[20px] text-font font-bold hover:text-font">MENU SEHAT</Link>
                         <Link to="/tentang" className="text-[20px] text-font font-bold hover:text-font">TENTANG KAMI</Link>
                       </div>
   
@@ -38,7 +38,7 @@ function Navbar() {
                   <div className="hidden lg:flex space-x-8 ml-[440px]">
                       <Link to="/" className="text-[20px] text-font font-bold hover:text-font">BERANDA</Link>
                       <Link to="/recipe" className="text-[20px] text-font font-bold hover:text-font">RESEP</Link>
-                      <Link to="/diet" className="text-[20px] text-font font-bold hover:text-font">DIET SEHAT</Link>
+                      <Link to="/diet" className="text-[20px] text-font font-bold hover:text-font">MENU SEHAT</Link>
                       <Link to="/about" className="text-[20px] text-font font-bold hover:text-font">TENTANG KAMI</Link>
                   </div>
                   <div className='hidden lg:flex'>

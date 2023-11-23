@@ -49,7 +49,7 @@ function Footer() {
                         </h2>
                         <ul className="">
                             <li className="mb-2">
-                                <a href="/resep" className="text-font text-[18px] hover:text-font">Resep</a>
+                                <a href="/recipe" className="text-font text-[18px] hover:text-font">Resep</a>
                             </li>
                             <li className="mb-2">
                                 <a href="/diet" className="text-font text-[18px] hover:text-font">Diet Sehat</a>
