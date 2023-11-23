@@ -15,10 +15,10 @@ function Footer() {
             <div className="md:flex md:justify-between px-4">
                 <div className="ml-8 mt-4">
                     <a href="#" className="flex items-center">
-                        <img src={logo} className="h-28" alt="RecipeIn Logo" />
+                        <img src={logo} className="h-24" alt="RecipeIn Logo" />
                         <p className='text-[38px] mt-2 ml-2 text-font font-extrabold'>RecipeIn</p>
                     </a>
-                    <p className='text-2xl lg:w-[282px] pt-4'>"BE THE CHEF OF YOUR KITCHEN"</p>
+                    <p className='text-2xl text-font pt-4 italic tracking-wider'>"Temukan, Masak, Nikmati"</p>
                 </div>
                 <div className="grid grid-cols-2 gap-8 sm:gap-12 sm:grid-cols-2 mt-8 text-font">
                     <div>
@@ -49,7 +49,7 @@ function Footer() {
                         </h2>
                         <ul className="">
                             <li className="mb-2">
-                                <a href="/resep" className="text-font text-[18px] hover:text-font">Resep</a>
+                                <a href="/recipe" className="text-font text-[18px] hover:text-font">Resep</a>
                             </li>
                             <li className="mb-2">
                                 <a href="/diet" className="text-font text-[18px] hover:text-font">Diet Sehat</a>
@@ -67,16 +67,16 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <hr class="border-[1px] border-font -ml-4 mt-8 w-screen" />
+            <hr className="border-[1px] border-font -ml-4 mt-8 w-screen" />
             <div className="flex -ml-4 h-[70px] bg-primary w-screen justify-between">
                 <p className='text-font text-base font-medium pt-[24px] ml-8'>&copy; 2023 RecipeIn - All right Reserved</p>
-                <div className='flex pt-[20px] mr-8'>
-                    <a href="https://www.facebook.com/RecipeIn"><BiLogoFacebook color='#4D4D4D' fontSize="30px" className='' /></a>
-                    <a href="https://www.instagram.com/RecipeIn"><BiLogoInstagram color='#4D4D4D' fontSize="30px" className='' /></a>
-                    <a href="https://id.pinterest.com/RecipeIn/"><BiLogoPinterestAlt color='#4D4D4D' fontSize="30px" className='' /></a>
-                    <a href="https://www.tiktok.com/@RecipeIn"><BiLogoTiktok color='#4D4D4D' fontSize="30px" className='' /></a>
-                    <a href="https://twitter.com/RecipeIn"><FaXTwitter color='#4D4D4D' fontSize="30px" className='' /></a>
-                    <a href="https://www.youtube.com/@RecipeIn"><BiLogoYoutube color='#4D4D4D' fontSize="30px" className='' /></a>
+                <div className='flex pt-[20px] mr-12'>
+                    <a href="https://www.facebook.com/RecipeIn"><BiLogoFacebook color='#111111' fontSize="30px" className='' /></a>
+                    <a href="https://www.instagram.com/RecipeIn"><BiLogoInstagram color='#111111' fontSize="30px" className='' /></a>
+                    <a href="https://id.pinterest.com/RecipeIn/"><BiLogoPinterestAlt color='#111111' fontSize="30px" className='' /></a>
+                    <a href="https://www.tiktok.com/@RecipeIn"><BiLogoTiktok color='#111111' fontSize="30px" className='' /></a>
+                    <a href="https://twitter.com/RecipeIn"><FaXTwitter color='#111111' fontSize="30px" className='' /></a>
+                    <a href="https://www.youtube.com/@RecipeIn"><BiLogoYoutube color='#111111' fontSize="30px" className='' /></a>
                 </div>
             </div>
         </footer>
