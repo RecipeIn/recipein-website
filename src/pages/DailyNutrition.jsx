@@ -10,7 +10,7 @@ import { IoInformationCircle } from "react-icons/io5";
 function DailyNutrition() {
     return (
         <>
-        <section className='body-font font-nunito w-screen h-[1358px]'>
+        <section className='body-font font-nunito w-screen h-full'>
             <Navbar />
             
             <div className='flex justify-between mt-16 mb-[150px]'>

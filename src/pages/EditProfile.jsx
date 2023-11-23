@@ -103,7 +103,7 @@ function EditProfile() {
                     </div>
                     <div className='ml-8 mt-8'>
                         <label for="desc" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Deskripsi</label>
-                        <textarea type="text" id="uname" className="bg-white w-[388px] h-[150px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black" placeholder="Masukkan deskripsi" required></textarea>
+                        <textarea type="text" id="uname" className="bg-white w-[388px] h-[150px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black" placeholder="Masukkan deskripsi" required></textarea>
                     </div>
 
                 </div>
