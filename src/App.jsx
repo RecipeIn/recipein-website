@@ -16,9 +16,7 @@ import PopularCategory from './pages/PopularCategory'
 import ViewProfile from './pages/ViewProfile'
 import DetailRecipe from './pages/DetailRecipe'
 
-
 function App() {
-
   return (
     <Routes>
       <Route index element={<Homepage />} /> 
@@ -35,8 +33,9 @@ function App() {
       <Route path="/pcategory" element={<PopularCategory />} />
       <Route path="/viewprofile" element={<ViewProfile />} />
       <Route path="/detail" element={<DetailRecipe />} />
+       <Route path="/about" element={<AboutUs />} />
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;
