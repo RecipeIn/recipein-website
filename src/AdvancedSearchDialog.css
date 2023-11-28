@@ -1,0 +1,32 @@
+.search-advanced {
+    position: fixed;
+    top: 100px; /* Sesuaikan dengan tinggi navbar Anda */
+    left: 590px;
+    width: 100%;
+    height: calc(100% - 100px); /* Sesuaikan dengan tinggi navbar Anda */
+    display: flex;
+    align-items: center;
+  }
+  
+  .dialog1 {
+    background: #fff;
+    border-radius: 8px;
+    width: 550px;
+  }
+  
+  .dialog1-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dialog1 input {
+    width: 95%;
+    padding: 10px;
+  }
+
+  body.overflow-hidden {
+    overflow: hidden;
+  }
+  
+  
