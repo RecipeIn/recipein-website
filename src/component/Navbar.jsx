@@ -5,8 +5,13 @@ import { Popover } from '@headlessui/react'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { BiSearchAlt } from "react-icons/bi";
 import { AiOutlineUser } from "react-icons/ai";
+import SearchDialog from './SearchDialog';
 
 function Navbar() {
+    const [isDialogOpen, setDialogOpen] = useState(false);
+
+    const openDialog = () => setDialogOpen(true);
+    const closeDialog = () => setDialogOpen(false);
     return (
       <>
         <div className='w-screen h-[100px]  bg-primary '>
@@ -16,9 +21,6 @@ function Navbar() {
                       <img src={logo} alt="" /> 
                       <p className='text-[38px] mt-2 ml-2 text-font font-extrabold'>RecipeIn</p>
                   </div>
-                  {/* <div>
-                    test
-                  </div> */}
                   <Popover className="lg:hidden absolute right-0">
                     <Popover.Button>
                       <HiMenuAlt3 fontSize="2.5rem"/>
@@ -41,10 +43,9 @@ function Navbar() {
                       <Link to="/diet" className="text-[20px] text-font font-bold hover:text-font">MENU SEHAT</Link>
                       <Link to="/about" className="text-[20px] text-font font-bold hover:text-font">TENTANG KAMI</Link>
                   </div>
-                  <div className='hidden lg:flex'>
-                  <Link to="/search">
-                    <BiSearchAlt color='#111111' fontSize="36px" className='ml-[300px]' />
-                  </Link>
+                  <div className='hidden lg:flex cursor-pointer'>
+                    <BiSearchAlt color='#111111' fontSize="36px" className='ml-[300px]' onClick={openDialog}/>
+                    <SearchDialog isOpen={isDialogOpen} onClose={closeDialog} />
                   </div>
                   <div className='hidden lg:flex bg-putih rounded-full -ml-4'>
                     <Link to="/profile">

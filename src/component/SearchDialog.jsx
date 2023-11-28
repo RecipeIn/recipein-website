@@ -1,4 +1,3 @@
-// src/components/SearchDialog.js
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import '../SearchDialog.css';
@@ -9,7 +8,6 @@ const SearchDialog = ({ isOpen, onClose }) => {
   const [keyword, setKeyword] = useState('');
 
   const handleSearch = () => {
-    // Lakukan logika pencarian di sini
     console.log('Pencarian:', keyword);
     onClose();
   };
@@ -34,7 +32,6 @@ const SearchDialog = ({ isOpen, onClose }) => {
   }, [dialogRef]);
 
   useEffect(() => {
-    // Menambahkan class ke body untuk mengatur properti overflow
     if (isOpen) {
       document.body.classList.add('overflow-hidden');
     } else {
@@ -42,7 +39,6 @@ const SearchDialog = ({ isOpen, onClose }) => {
     }
 
     return () => {
-      // Menghapus class pada body saat komponen di-unmount
       document.body.classList.remove('overflow-hidden');
     };
   }, [isOpen]);
