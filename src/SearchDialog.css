@@ -1,0 +1,33 @@
+/* src/components/SearchDialog.css */
+.search-dialog {
+    position: fixed;
+    top: 100px; /* Sesuaikan dengan tinggi navbar Anda */
+    left: 590px;
+    width: 100%;
+    height: calc(100% - 100px); /* Sesuaikan dengan tinggi navbar Anda */
+    display: flex;
+    align-items: center;
+  }
+  
+  .dialog {
+    background: #fff;
+    border-radius: 8px;
+    width: 550px;
+  }
+  
+  .dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dialog input {
+    width: 73%;
+    padding: 10px;
+  }
+
+  body.overflow-hidden {
+    overflow: hidden;
+  }
+  
+  
