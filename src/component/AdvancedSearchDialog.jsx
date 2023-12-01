@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import '../AdvancedSearchDialog.css';
 import SearchDialog from './SearchDialog';
+import { Link } from "react-router-dom";
 
 const AdvancedSearchDialog = ({ isOpen, onClose }) => {
   const dialogRef = useRef(null);
@@ -60,7 +61,9 @@ const AdvancedSearchDialog = ({ isOpen, onClose }) => {
           <label className='text-font font-medium text-lg mb-1'></label>
           <input type="text" placeholder="Cari resep sesuai bahan" className='rounded-[10px] border-2 border-font' value={keywordNotIngredient} onChange={(e) => setKeywordNotIngredient(e.target.value)}/>
         </div>
-        <button className='ml-40 p-[10px] w-2/5 mt-8 mb-4 text-lg font-bold bg-primary text-black border-none rounded-[8px]' onClick={handleSearch}>Cari</button>
+        <Link to="/saresult">
+          <button className='ml-40 p-[10px] w-2/5 mt-8 mb-4 text-lg font-bold bg-primary text-black border-none rounded-[8px]' onClick={handleSearch}>Cari</button>
+        </Link>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import '../SearchDialog.css';
 import AdvancedSearchDialog from './AdvancedSearchDialog';
+import { Link } from "react-router-dom";
 
 const SearchDialog = ({ isOpen, onClose }) => {
   const dialogRef = useRef(null);
@@ -48,7 +49,9 @@ const SearchDialog = ({ isOpen, onClose }) => {
       <div className="dialog px-4 pt-6 pb-2" ref={dialogRef}>
         <h2 className='text-font font-medium text-lg mb-1'>Mau cari resep apa?</h2>
         <input type="text" placeholder="Kata kunci" className='rounded-[10px] border-2 border-font' value={keyword} onChange={(e) => setKeyword(e.target.value)}/>
-        <button className='ml-8 p-[10px] w-1/5 bg-primary text-black border-none rounded-[8px]' onClick={handleSearch}>Cari</button>
+        <Link to="/sresult">
+          <button className='ml-8 p-[10px] w-1/5 bg-primary text-black border-none rounded-[8px]' onClick={handleSearch}>Cari</button>
+        </Link>
         <button className='bg-white border-none focus:outline-none mt-2 text-blue-500 text-lg font-medium ml-[355px] px-1 py-1' onClick={openDialog}>Pencarian Lanjutan</button>
         <AdvancedSearchDialog isOpen={isDialogOpen} onClose={closeDialog} />
       </div>
