@@ -236,8 +236,8 @@ function Recipe() {
                 <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
                 {newRecipe.map((newRecipe) => (
                     
-                    <div className='rounded-[8px] bg-white w-[323px] h-[400px] shadow-xl '>
-                        <Link to="/detail"><img src={newRecipe.photo} className='rounded-[8px]'/></Link>
+                    <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
+                        <Link to="/detail"><img src={newRecipe.photo} className='rounded-[8px] w-[323px] h-[180px]'/></Link>
                         <div className='ml-[268px] -mt-[176px] relative z-20'>
                         <button className={`w-[44px] h-[44px] rounded-full cursor-pointer bg-primary items-center py-2.5 px-2.5 ${
                             isLiked ? 'text-red-500' : 'text-font'}`}
@@ -266,8 +266,8 @@ function Recipe() {
                 <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
                 {weeklyMeals.map((weeklyMeals) => (
                     
-                    <div className='rounded-[8px] bg-white w-[323px] h-[400px] shadow-xl '>
-                        <Link to="/detail"><img src={weeklyMeals.photo} className='rounded-[8px]'/></Link>
+                    <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
+                        <Link to="/detail"><img src={weeklyMeals.photo} className='rounded-[8px] w-[323px] h-[180px]'/></Link>
                         <div className='ml-[268px] -mt-[176px] relative z-20'>
                         <button className={`w-[44px] h-[44px] rounded-full cursor-pointer bg-primary items-center py-2.5 px-2.5 ${
                             isLiked ? 'text-red-500' : 'text-font'}`}
@@ -296,8 +296,8 @@ function Recipe() {
                 <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
                 {weeklyDrinks.map((weeklyDrinks) => (
                     
-                    <div className='rounded-[8px] bg-white w-[323px] h-[400px] shadow-xl '>
-                        <Link to="/detail"><img src={weeklyDrinks.photo} className='rounded-[8px]'/></Link>
+                    <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
+                        <Link to="/detail"><img src={weeklyDrinks.photo} className='rounded-[8px] w-[323px] h-[180px]'/></Link>
                         <div className='ml-[268px] -mt-[176px] relative z-20'>
                         <button className={`w-[44px] h-[44px] rounded-full cursor-pointer bg-primary items-center py-2.5 px-2.5 ${
                             isLiked ? 'text-red-500' : 'text-font'}`}
@@ -326,8 +326,8 @@ function Recipe() {
                 <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
                 {variousSoup.map((variousSoup) => (
                     
-                    <div className='rounded-[8px] bg-white w-[323px] h-[400px] shadow-xl '>
-                        <Link to="/detail"><img src={variousSoup.photo} className='rounded-[8px]'/></Link>
+                    <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
+                        <Link to="/detail"><img src={variousSoup.photo} className='rounded-[8px] w-[323px] h-[180px]'/></Link>
                         <div className='ml-[268px] -mt-[176px] relative z-20'>
                         <button className={`w-[44px] h-[44px] rounded-full cursor-pointer bg-primary items-center py-2.5 px-2.5 ${
                             isLiked ? 'text-red-500' : 'text-font'}`}
@@ -356,8 +356,8 @@ function Recipe() {
                 <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
                 {variousSeblak.map((variousSeblak) => (
                     
-                    <div className='rounded-[8px] bg-white w-[323px] h-[400px] shadow-xl '>
-                        <Link to="/detail"><img src={variousSeblak.photo} className='rounded-[8px]'/></Link>
+                    <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
+                        <Link to="/detail"><img src={variousSeblak.photo} className='rounded-[8px] w-[323px] h-[180px]'/></Link>
                         <div className='ml-[268px] -mt-[176px] relative z-20'>
                         <button className={`w-[44px] h-[44px] rounded-full cursor-pointer bg-primary items-center py-2.5 px-2.5 ${
                             isLiked ? 'text-red-500' : 'text-font'}`}

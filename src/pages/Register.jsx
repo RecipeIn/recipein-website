@@ -33,7 +33,7 @@ function Register() {
                     <input type="password" id="cpassword" className="bg-field w-[400px] h-[50px]  text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black" placeholder="Ulangi kata sandi" required></input>
                     <input id="terms" type="checkbox" className="w-[17px] h-[17px] bg-field border border-font mt-4 " ></input>
                     <label for="terms" className="text-[16px] ml-2">Saya menerima ketentuan perjanjian</label>
-                    <button type="submit" className="w-[400px] bg-primary font-bold rounded-[16px] text-[20px] mt-12 px-5 py-3 text-center">Daftar</button>
+                    <Link to='/verif'><button type="submit" className="w-[400px] bg-primary font-bold rounded-[16px] text-[20px] mt-12 px-5 py-3 text-center">Daftar</button></Link>
                     <p className='text-[14px] font-medium pl-32 pt-2'>Sudah punya akun? <Link to="/login" className="text-font hover:text-font">Masuk</Link></p>
 
                     <div className='inline-flex'>

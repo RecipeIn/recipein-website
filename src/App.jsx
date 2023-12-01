@@ -16,6 +16,8 @@ import PopularCategory from './pages/PopularCategory'
 import ViewProfile from './pages/ViewProfile'
 import DetailRecipe from './pages/DetailRecipe'
 import AboutUs from './pages/AboutUs'
+import SearchResult from './pages/SearchResult'
+import AdvancedSearchResult from './pages/AdvancedSearchResult'
 
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
       <Route path="/viewprofile" element={<ViewProfile />} />
       <Route path="/detail" element={<DetailRecipe />} />
       <Route path="/about" element={<AboutUs />} />
+      <Route path="/sresult" element={<SearchResult />} />
+      <Route path="/saresult" element={<AdvancedSearchResult />} />
     </Routes>
   )
 }
