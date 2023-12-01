@@ -6,6 +6,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { BiSearchAlt } from "react-icons/bi";
 import { AiOutlineUser } from "react-icons/ai";
 import SearchDialog from './SearchDialog';
+import profile from "../assets/img/profile.png"
 
 function Navbar() {
     const [isDialogOpen, setDialogOpen] = useState(false);
@@ -49,7 +50,8 @@ function Navbar() {
                   </div>
                   <div className='hidden lg:flex bg-putih rounded-full -ml-4'>
                     <Link to="/profile">
-                        <AiOutlineUser color='#111111' fontSize="50px" className='py-2 px-2'/>
+                        {/* <AiOutlineUser color='#111111' fontSize="50px" className='py-2 px-2'/> */}
+                        <img className=" w-[50px] h-[50px] rounded-full" src={profile} alt=""/>
                     </Link>
                   </div>
               </div>
