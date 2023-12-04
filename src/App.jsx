@@ -1,28 +1,30 @@
-import { useState } from 'react'
-import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Register from './pages/Register'
-import Login from './pages/Login'
-import ForgotPass from './pages/ForgotPass'
-import Verification from './pages/Verification'
-import NewPass from './pages/NewPass'
-import Profile from './pages/Profile'
-import EditProfile from './pages/EditProfile'
-import DailyNutrition from './pages/DailyNutrition'
-import Homepage from './pages/Homepage'
-import Recipe from './pages/Recipe'
-import Diet from './pages/Diet'
-import PopularCategory from './pages/PopularCategory'
-import ViewProfile from './pages/ViewProfile'
-import DetailRecipe from './pages/DetailRecipe'
-import AboutUs from './pages/AboutUs'
-
+import { useState } from "react";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import ForgotPass from "./pages/ForgotPass";
+import Verification from "./pages/Verification";
+import NewPass from "./pages/NewPass";
+import Profile from "./pages/Profile";
+import EditProfile from "./pages/EditProfile";
+import DailyNutrition from "./pages/DailyNutrition";
+import Homepage from "./pages/Homepage";
+import Recipe from "./pages/Recipe";
+import Diet from "./pages/Diet";
+import PopularCategory from "./pages/PopularCategory";
+import ViewProfile from "./pages/ViewProfile";
+import DetailRecipe from "./pages/DetailRecipe";
+import AboutUs from "./pages/AboutUs";
+import SyaratKetentuan from "./pages/SyaratKetentuan";
+import KebijakanPrivasi from "./pages/KebijakanPrivasi";
+import HubungiKami from "./pages/HubungiKami";
+import Faq from "./pages/Faq";
 
 function App() {
-
   return (
     <Routes>
-      <Route index element={<Homepage />} /> 
+      <Route index element={<Homepage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgotpass" element={<ForgotPass />} />
@@ -37,8 +39,12 @@ function App() {
       <Route path="/viewprofile" element={<ViewProfile />} />
       <Route path="/detail" element={<DetailRecipe />} />
       <Route path="/about" element={<AboutUs />} />
+      <Route path="/syaratketentuan" element={<SyaratKetentuan />} />
+      <Route path="/kebijakanprivasi" element={<KebijakanPrivasi />} />
+      <Route path="/hubungikami" element={<HubungiKami />} />
+      <Route path="/faq" element={<Faq />} />
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;
