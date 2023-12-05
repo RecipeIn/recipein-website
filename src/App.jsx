@@ -28,12 +28,10 @@ import FAQ from './pages/FAQ'
 import TNC from './pages/TNC'
 import PP from './pages/PP'
 
-
 function App() {
-
   return (
     <Routes>
-      <Route index element={<Homepage />} /> 
+      <Route index element={<Homepage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgotpass" element={<ForgotPass />} />
@@ -60,7 +58,7 @@ function App() {
       <Route path="/tnc" element={<TNC />} />
       <Route path="/pp" element={<PP />} />
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;
