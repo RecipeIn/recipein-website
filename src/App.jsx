@@ -23,6 +23,10 @@ import Favorite from './pages/Favorite'
 import Status from './pages/Status'
 import AddRecipe from './pages/AddRecipe'
 import EditRecipe from './pages/EditRecipe'
+import ContactUs from './pages/ContactUs'
+import FAQ from './pages/FAQ'
+import TNC from './pages/TNC'
+import PP from './pages/PP'
 
 
 function App() {
@@ -51,6 +55,10 @@ function App() {
       <Route path="/status" element={<Status />} />
       <Route path="/addrecipe" element={<AddRecipe />} />
       <Route path="/editrecipe" element={<EditRecipe />} />
+      <Route path="/contact" element={<ContactUs />} />
+      <Route path="/faq" element={<FAQ />} />
+      <Route path="/tnc" element={<TNC />} />
+      <Route path="/pp" element={<PP />} />
     </Routes>
   )
 }
