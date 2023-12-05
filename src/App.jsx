@@ -18,6 +18,11 @@ import DetailRecipe from './pages/DetailRecipe'
 import AboutUs from './pages/AboutUs'
 import SearchResult from './pages/SearchResult'
 import AdvancedSearchResult from './pages/AdvancedSearchResult'
+import MyRecipe from './pages/MyRecipe'
+import Favorite from './pages/Favorite'
+import Status from './pages/Status'
+import AddRecipe from './pages/AddRecipe'
+import EditRecipe from './pages/EditRecipe'
 
 
 function App() {
@@ -31,7 +36,7 @@ function App() {
       <Route path="/verif" element={<Verification />} />
       <Route path="/newpass" element={<NewPass />} />
       <Route path="/profile" element={<Profile />} />
-      <Route path="/edit" element={<EditProfile />} />
+      <Route path="/editprofile" element={<EditProfile />} />
       <Route path="/dnutrition" element={<DailyNutrition />} />
       <Route path="/recipe" element={<Recipe />} />
       <Route path="/diet" element={<Diet />} />
@@ -41,6 +46,11 @@ function App() {
       <Route path="/about" element={<AboutUs />} />
       <Route path="/sresult" element={<SearchResult />} />
       <Route path="/saresult" element={<AdvancedSearchResult />} />
+      <Route path="/myrecipe" element={<MyRecipe />} />
+      <Route path="/favorite" element={<Favorite />} />
+      <Route path="/status" element={<Status />} />
+      <Route path="/addrecipe" element={<AddRecipe />} />
+      <Route path="/editrecipe" element={<EditRecipe />} />
     </Routes>
   )
 }
