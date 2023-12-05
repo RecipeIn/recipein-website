@@ -1,0 +1,26 @@
+.folder-dialog {
+    position: absolute;
+    right: 85px;
+    height: 537px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    z-index: 30;
+  }
+  
+  .dialog2 {
+    background: #fff;
+    border-radius: 12px;
+  }
+  
+  .dialog2-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  body.overflow-hidden {
+    overflow: hidden;
+  }
+  
+  
