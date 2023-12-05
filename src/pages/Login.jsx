@@ -24,9 +24,9 @@ function Login() {
                     <p className='text-[32px] font-extrabold pt-12'>Masuk</p>
                     <p className='text-[18px] tracking-wide'>Masuk untuk melanjutkan</p>
                     <label for="email" className="block text-lg font-bold justify-center pt-4 pb-2">Email</label>
-                    <input type="email" id="email" className="bg-field w-[400px] h-[50px] shadow-lg text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black" placeholder="Masukkan email" required></input>
+                    <input type="email" id="email" className="bg-field w-[400px] h-[50px] shadow-lg text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="Masukkan email" required></input>
                     <label for="password" className="block text-lg font-bold justify-center pt-4 pb-2">Kata Sandi</label>
-                    <input type="password" id="password" className="bg-field w-[400px] h-[50px] shadow-lg text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black" placeholder="Masukkan kata sandi" required></input>
+                    <input type="password" id="password" className="bg-field w-[400px] h-[50px] shadow-lg text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="Masukkan kata sandi" required></input>
                     
                     <div className='inline-flex mb-32'>
                     <input id="terms" type="checkbox" className="w-[17px] h-[17px] bg-field border border-font mt-4 " ></input>
@@ -34,7 +34,7 @@ function Login() {
                     <Link to="/forgotpass" className="mt-3 ml- text-font hover:text-font ml-40">Lupa kata sandi?</Link>
                     </div>
                     
-                    <button type="submit" className="w-[400px] bg-primary font-bold rounded-[16px] text-[20px] mt-12 px-5 py-3 text-center">Masuk</button>
+                    <Link to='../'><button type="submit" className="w-[400px] bg-primary font-bold rounded-[16px] text-[20px] mt-12 px-5 py-3 text-center text-font border-none">Masuk</button></Link>
                     <p className='text-[14px] font-medium pl-32 pt-2'>Belum punya akun? <Link to="/register" className="text-font hover:text-font">Daftar</Link></p>
 
                     <div className='inline-flex'>

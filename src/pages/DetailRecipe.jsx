@@ -290,7 +290,7 @@ function DetailRecipe() {
                             <div className='flex justify-end'>
                                 <div className='inline-flex text-font mt-[105px] mr-2'>
                                         <button className='border border-primary w-[83px] h-[38px] bg-[#E6E6E6] py-1 px-1 text-[18px] rounded-[4px] shadow-lg'>Batal</button>
-                                        <button className='ml-4 w-[83px] h-[38px] bg-primary py-1 px-1 text-[18px] rounded-[4px] shadow-lg'>Batal</button>
+                                        <button className='ml-4 w-[83px] h-[38px] bg-primary py-1 px-1 text-[18px] rounded-[4px] shadow-lg'>Kirim</button>
                                 </div>
                             </div>
                         </div>

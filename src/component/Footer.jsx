@@ -30,13 +30,13 @@ function Footer() {
                                 <a href="/about" className="text-font text-[18px] hover:text-font">Tentang Kami</a>
                             </li>
                             <li className="mb-2">
-                                <a href="/sk" className="text-font text-[18px] hover:text-font">Syarat dan Ketentuan</a>
+                                <a href="/tnc" className="text-font text-[18px] hover:text-font">Syarat dan Ketentuan</a>
                             </li>
                             <li className="mb-2">
-                                <a href="/kebijakan" className="text-font text-[18px] hover:text-font">Kebijakan Privasi</a>
+                                <a href="/pp" className="text-font text-[18px] hover:text-font">Kebijakan Privasi</a>
                             </li>
                             <li className="mb-2">
-                                <a href="/kontak" className="text-font text-[18px] hover:text-font">Kontak</a>
+                                <a href="/contact" className="text-font text-[18px] hover:text-font">Kontak</a>
                             </li>
                             <li className="mb-2">
                                 <a href="/faq" className="text-font text-[18px] hover:text-font">FAQ</a>
@@ -49,19 +49,19 @@ function Footer() {
                         </h2>
                         <ul className="">
                             <li className="mb-2">
-                                <a href="/recipe" className="text-font text-[18px] hover:text-font">Resep</a>
+                                <a href="/reci[e" className="text-font text-[18px] hover:text-font">Resep</a>
                             </li>
                             <li className="mb-2">
                                 <a href="/diet" className="text-font text-[18px] hover:text-font">Diet Sehat</a>
                             </li>
                             <li className="mb-2">
-                                <a href="/resepku" className="text-font text-[18px] hover:text-font">Resep Ku</a>
+                                <a href="/myrecipe" className="text-font text-[18px] hover:text-font">Resep Ku</a>
                             </li>
                             <li className="mb-2">
-                                <a href="/nutrisi" className="text-font text-[18px] hover:text-font">Nutrisi Harian</a>
+                                <a href="/dnutrition" className="text-font text-[18px] hover:text-font">Nutrisi Harian</a>
                             </li>
                             <li className="mb-2">
-                                <a href="/favorit" className="text-font text-[18px] hover:text-font">Resep Favorit</a>
+                                <a href="/favorite" className="text-font text-[18px] hover:text-font">Resep Favorit</a>
                             </li>
                         </ul>
                     </div>
