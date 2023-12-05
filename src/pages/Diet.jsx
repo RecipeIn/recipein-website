@@ -131,8 +131,8 @@ function Diet() {
                 <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
                 {healthyMeals.map((healthyMeals) => (
                     
-                    <div className='rounded-[8px] bg-white w-[323px] h-[400px] shadow-xl '>
-                        <Link to="/detail"><img src={healthyMeals.photo} className='rounded-[8px]'/></Link>
+                    <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
+                        <Link to="/detail"><img src={healthyMeals.photo} className='rounded-[8px] w-[323px] h-[180px]'/></Link>
                         <div className='ml-[268px] -mt-[176px] relative z-20'>
                         <button className={`w-[44px] h-[44px] rounded-full cursor-pointer bg-primary items-center py-2.5 px-2.5 ${
                             isLiked ? 'text-red-500' : 'text-font'}`}
@@ -161,8 +161,8 @@ function Diet() {
                 <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
                 {lowCalMeals.map((lowCalMeals) => (
                     
-                    <div className='rounded-[8px] bg-white w-[323px] h-[400px] shadow-xl '>
-                        <Link to="/detail"><img src={lowCalMeals.photo} className='rounded-[8px]'/></Link>
+                    <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
+                        <Link to="/detail"><img src={lowCalMeals.photo} className='rounded-[8px] w-[323px] h-[180px]'/></Link>
                         <div className='ml-[268px] -mt-[176px] relative z-20'>
                         <button className={`w-[44px] h-[44px] rounded-full cursor-pointer bg-primary items-center py-2.5 px-2.5 ${
                             isLiked ? 'text-red-500' : 'text-font'}`}
