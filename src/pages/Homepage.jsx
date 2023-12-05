@@ -213,7 +213,7 @@ function Homepage() {
                     <div className='flex flex-col ml-[70px]'>
                         <Link to="/pcategory">
                         <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl'>
-                            <img src={sarapan} className='mt-6 ml-3'/>
+                            <img src={sarapan} className='pt-5 ml-3'/>
                         </div>
                         <div>
                         <p className='text-[20px] font-medium text-font mt-8 ml-8 mb-4'>SARAPAN</p>

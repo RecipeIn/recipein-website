@@ -30,7 +30,7 @@ function Navbar() {
                     <Popover.Panel className="absolute z-10">
                       <div className="grid grid-cols-2">
                         <Link to="/" className="text-[20px] text-font font-bold hover:text-font">BERANDA</Link>
-                        <Link to="/resep" className="text-[20px] text-font font-bold hover:text-font">RESEP</Link>
+                        <Link to="/recipe" className="text-[20px] text-font font-bold hover:text-font">RESEP</Link>
                         <Link to="/diet" className="text-[20px] text-font font-bold hover:text-font">MENU SEHAT</Link>
                         <Link to="/about" className="text-[20px] text-font font-bold hover:text-font">TENTANG KAMI</Link>
                       </div>

@@ -21,11 +21,11 @@ function EditProfile() {
                     <div className='flex justify-center text-font text-[16px]'>
                         <ul className="ml-10">
                             <li className='bg-putih mt-4 rounded-[8px] shadow-lg w-[300px] h-[40px] inline-flex justify-between border-none'>
-                                <a href="/resepku" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Resep Ku</a>
+                                <a href="/myrecipe" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Resep Ku</a>
                                 <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-putih mt-4 rounded-[8px] shadow-lg w-[300px] h-[40px] inline-flex justify-between border-none'>
-                                <a href="/favorit" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Favorite</a>
+                                <a href="/favorite" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Favorite</a>
                                 <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-putih mt-4 rounded-[8px] shadow-lg w-[300px] h-[40px] inline-flex justify-between border-none'>
@@ -33,7 +33,7 @@ function EditProfile() {
                                 <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-putih mt-4 rounded-[8px] shadow-lg w-[300px] h-[40px] inline-flex justify-between border-none'>
-                                <a href="/edit" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Sunting Profile</a>
+                                <a href="/editprofile" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Sunting Profile</a>
                                 <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-putih mt-4 rounded-[8px] shadow-lg w-[300px] h-[40px] inline-flex justify-between border-none'>
@@ -41,7 +41,7 @@ function EditProfile() {
                                 <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                             <li className='bg-[#CE272C] mt-4 rounded-[8px] shadow-lg w-[300px] h-[40px] inline-flex justify-between border-none'>
-                                <a href="/logout" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Keluar</a>
+                                <a href="/login" className="ml-4 mt-2 w-[300px] h-[40px] text-font text-[18px] font-bold hover:text-font">Keluar</a>
                                 <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                             </li>
                         </ul>
@@ -55,35 +55,27 @@ function EditProfile() {
                     <div className='ml-8 mt-8 inline-flex text-font'>
                         <div className='flex flex-col'>
                             <label for="fname" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Nama Depan</label>
-                            <input type="text" disabled id="fname" className="bg-white w-[400px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black placeholder-black" placeholder="Dapur Amanda" required></input>
+                            <input type="text" disabled id="fname" className="bg-white w-[400px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-black" placeholder="Dapur Amanda" required></input>
                         </div>
                         <div className='flex flex-col ml-8'>
                             <label for="bname" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Nama Belakang</label>
-                            <input type="text" disabled id="bname" className="bg-white w-[400px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black placeholder-black" placeholder="Bisyaroh" required></input>
+                            <input type="text" disabled id="bname" className="bg-white w-[400px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-black" placeholder="Bisyaroh" required></input>
                         </div>
                     </div>
-                    <div className='ml-8 mt-8 inline-flex'>
+                    <div className='ml-8 mt-8 inline-flex text-font'>
                         <div className='flex flex-col'>
                             <label for="uname" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Username</label>
-                            <input type="text" disabled id="uname" className="bg-white w-[400px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black placeholder-black" placeholder="dapuramandabisyaroh" required></input>
+                            <input type="text" disabled id="uname" className="bg-white w-[400px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-black" placeholder="dapuramandabisyaroh" required></input>
                         </div>
                         <div className='flex flex-col-reverse -ml-96 mb-32'>
-                            <label for="tgl" className="block text-[18px] font-bold justify-center -ml-4 pb-2 tracking-wider">Tanggal Lahir</label>
+                            <label for="desc" className="block text-[18px] font-bold justify-center -ml-4 pb-2 tracking-wider">Deskripsi</label>
                         </div>
-                        <div className='flex flex-col ml-[324px]'>
+                        <div className='flex flex-col ml-[354px]'>
                             <img className=" w-[250px] h-[250px] rounded-none mt-8" src={profile} alt=""/>
                         </div>
                     </div>
                     <div className='ml-8 -mt-32 flex'>
-                        <input type="text" disabled min="1" max="31" id="tgl" className="bg-white w-[47px] h-[47px] text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-2.5 text-black placeholder-black" placeholder="16" required></input>
-                        <p className='text-[32px] ml-4 mr-4'>/</p>
-                        <input type="tex" disabled min="1" max="12" id="tgl" className="bg-white w-[47px] h-[47px] text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-2.5 text-black placeholder-black" placeholder="05" required></input>
-                        <p className='text-[32px] ml-4 mr-4'>/</p>
-                        <input type="text" disabled min="1975" max="2050" id="tgl" className="bg-white w-[76px] h-[47px] text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-4 text-black placeholder-black" placeholder="1996" required></input>
-                    </div>
-                    <div className='ml-8 mt-8'>
-                        <label for="desc" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Deskripsi</label>
-                        <textarea type="text" disabled id="desc" className="bg-white w-[388px] h-[150px] tracking-wider text-base border border-black rounded-[10px] resize-none focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black placeholder-black" placeholder="Salam hangat dari dapur yang penuh aroma dan kehangatan! Saya adalah Amanda, seorang pecinta masakan yang selalu mencari inspirasi baru untuk menghidangkan kreasi kuliner istimewa." required></textarea>
+                    <textarea type="text" disabled id="desc" className="bg-white w-[400px] h-[150px] tracking-wider text-base border border-black rounded-[10px] resize-none focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-black" placeholder="Salam hangat dari dapur yang penuh aroma dan kehangatan! Saya adalah Amanda, seorang pecinta masakan yang selalu mencari inspirasi baru untuk menghidangkan kreasi kuliner istimewa." required></textarea>
                     </div>
                 </div>
             </div>

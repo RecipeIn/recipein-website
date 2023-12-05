@@ -24,9 +24,9 @@ function Verification() {
                     <p className='text-[32px] font-extrabold pt-24'>Verifikasi</p>
                     <p className='text-[18px] tracking-wide w-[350px]'>Silahkan masukkan kode verifikasi yang telah dikirimkan ke email anda.</p>
                     <label for="kode" className="block text-lg font-bold justify-center pt-4 pb-2">Kode Verifikasi</label>
-                    <input type="text" id="kode" className="bg-field w-[400px] h-[50px]  text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-black" placeholder="Masukkan kode verifikasi" required></input>
+                    <input type="text" id="kode" className="bg-field w-[400px] h-[50px]  text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="Masukkan kode verifikasi" required></input>
                     
-                    <button type="submit" className="w-[400px] bg-primary font-bold rounded-[16px] text-[20px] mt-72 px-5 py-3 text-center">Kirim</button>
+                    <Link to='/newpass'><button type="submit" className="w-[400px] bg-primary font-bold rounded-[16px] text-[20px] mt-72 px-5 py-3 text-center text-font">Kirim</button></Link>
                 </div>
 
 

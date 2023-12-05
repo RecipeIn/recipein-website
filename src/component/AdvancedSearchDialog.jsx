@@ -62,7 +62,7 @@ const AdvancedSearchDialog = ({ isOpen, onClose }) => {
           <input type="text" placeholder="Cari resep sesuai bahan" className='rounded-[10px] border-2 border-font' value={keywordNotIngredient} onChange={(e) => setKeywordNotIngredient(e.target.value)}/>
         </div>
         <Link to="/saresult">
-          <button className='ml-40 p-[10px] w-2/5 mt-8 mb-4 text-lg font-bold bg-primary text-black border-none rounded-[8px]' onClick={handleSearch}>Cari</button>
+          <button className='ml-40 p-[10px] w-2/5 mt-8 mb-4 text-lg font-bold bg-primary text-font border-none rounded-[8px]' onClick={handleSearch}>Cari</button>
         </Link>
       </div>
     </div>
