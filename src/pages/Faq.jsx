@@ -7,7 +7,7 @@ import faqimg from "../assets/img/faqimg.png";
 import { Disclosure } from "@headlessui/react";
 import { BiChevronDown } from "react-icons/bi";
 
-const services = [
+const dropdownfaq = [
   {
     title: "Bagaimana cara menambahkan resep pribadi ke RecipeIn?",
     answer: "",
@@ -34,7 +34,7 @@ const services = [
   },
 ];
 
-function Faq() {
+function FAQ() {
   return (
     <>
       <section className="body-font font-nunito w-screen h-auto">
@@ -55,16 +55,16 @@ function Faq() {
           <div>
             <div className="w-full px-60 pt-0 pb-32">
               <div className=" w-full pt-4">
-                {services.map((service) => (
+                {dropdownfaq.map((dropdownfaq) => (
                   <div className="mx-0 w-full rounded-2xl bg-white py-2">
                     <Disclosure>
                       {({ open }) => (
                         <>
                           <Disclosure.Button className="flex w-full justify-between rounded-lg bg-gray-200 px-4 py-2 text-left text-xl font-medium text-black-900 hover:bg-primary focus:outline-none focus-visible:ring focus-visible:ring-black-500 focus-visible:ring-opacity-75">
-                            <span>{service.title}</span>
+                            <span>{dropdownfaq.title}</span>
                             <BiChevronDown className={`${open ? "rotate-180 transform" : ""} h-8 w-10 text-black-500`} />
                           </Disclosure.Button>
-                          <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl text-black-500">{service.answer}</Disclosure.Panel>
+                          <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl text-black-500">{dropdownfaq.answer}</Disclosure.Panel>
                         </>
                       )}
                     </Disclosure>
@@ -81,4 +81,4 @@ function Faq() {
   );
 }
 
-export default Faq;
+export default FAQ;
