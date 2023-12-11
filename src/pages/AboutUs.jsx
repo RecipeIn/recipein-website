@@ -30,9 +30,12 @@ function AboutUs() {
               dapur berarti. Sejarah RecipeIn adalah kisah sukses 12 individu yang membawa cinta mereka terhadap masakan ke dunia digital.
             </p>
           </div>
-          <p className=" text-center mb-5 mt-12 ml-2 text-[32px] h-[50px] text-font font-extrabold">Mengapa Menggunakan RecipeIn</p>
-
-          <div className="grid grid-cols-3 gap-4 ml-20 mb-20">
+          <p className=" text-center mb-5 mt-12 text-[32px] h-[50px] text-font font-extrabold">Mengapa Menggunakan RecipeIn</p>
+          
+          <div>
+            
+          </div>
+          <div className="grid grid-cols-3 gap-x-8 ml-12 mb-20">
             {/* Card 01 */}
             <div className="bg-primary inline-block w-[394px] rounded-[16px] shadow-lg">
               <img className="w-full" src={card1} alt="Gambar" />
@@ -66,8 +69,7 @@ function AboutUs() {
             </div>
             {/* End Card 03 */}
           </div>
-          </div>
-
+        </div>
         <Footer />
       </section>
     </>

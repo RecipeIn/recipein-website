@@ -149,32 +149,32 @@ function MyRecipe() {
 
             <div className='flex justify-center mb-20'>
                 <Link to='/status'>
-                <div className='w-[1380px] h-[156px] bg-primary rounded-full inline-flex'>
-                    <div className='ml-48 mt-7'>
+                <div className='h-[156px] bg-primary rounded-full inline-flex'>
+                    <div className='ml-20 mt-7'>
                         <div className='w-[66px] h-[66px] bg-[#E6E6E6] rounded-full'>
                             <p className='text-center pt-4 text-[22px] font-medium text-font'>4</p>
                         </div>
                         <p className='text-center text-[22px] font-semibold tracking-wider text-font mt-2'>Kirim</p>
                     </div>
-                    <div className='ml-40 mt-7'>
+                    <div className='ml-20 mt-7'>
                         <div className='w-[66px] h-[66px] bg-[#E6E6E6] rounded-full'>
                             <p className='text-center pt-4 text-[22px] font-medium text-font'>2</p>
                         </div>
                         <p className='text-center text-[22px] font-semibold tracking-wider text-font mt-2'>Tinjau</p>
                     </div>
-                    <div className='ml-40 mt-7'>
+                    <div className='ml-20 mt-7'>
                         <div className='w-[66px] h-[66px] bg-[#E6E6E6] rounded-full'>
                             <p className='text-center pt-4 text-[22px] font-medium text-font'>0</p>
                         </div>
                         <p className='text-center text-[22px] font-semibold tracking-wider text-font mt-2'>Revisi</p>
                     </div>
-                    <div className='ml-40 mt-7'>
+                    <div className='ml-20 mt-7'>
                         <div className='w-[66px] h-[66px] bg-[#E6E6E6] rounded-full'>
                             <p className='text-center pt-4 text-[22px] font-medium text-font'>20</p>
                         </div>
                         <p className='text-center text-[22px] font-semibold tracking-wider text-font mt-2'>Terbit</p>
                     </div>
-                    <div className='ml-40 mt-7'>
+                    <div className='ml-20 mr-20 mt-7'>
                         <div className='w-[66px] h-[66px] bg-[#E6E6E6] rounded-full'>
                             <p className='text-center pt-4 text-[22px] font-medium text-font'>0</p>
                         </div>
@@ -184,8 +184,8 @@ function MyRecipe() {
                 </Link>
             </div>
 
-            <div className='mb-16 ml-12'>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {myRecipe.map((myRecipe) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
@@ -217,9 +217,9 @@ function MyRecipe() {
                 ))}
                 </div>
             </div>
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Kumpulan Masakan Ayam</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Kumpulan Masakan Ayam</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {folderAyam.map((folderAyam) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
@@ -251,9 +251,9 @@ function MyRecipe() {
                 ))}
                 </div>
             </div>
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Kreasi Kue</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Kreasi Kue</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {folderKue.map((folderKue) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>

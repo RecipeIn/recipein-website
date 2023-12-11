@@ -56,37 +56,37 @@ function Status () {
             <Link to='/myrecipe'>
             <div className='flex mt-20 ml-28'>
                 <FaLessThan size='32px' color='#1E2C48' className='mt-1.5'/>
-                <p className='ml-4 text-[28px] text-secondary font-medium'>Kembali</p>
+                <p className='ml-4 text-[24px] text-secondary font-medium'>Kembali</p>
             </div>
             </Link>
-            <div className='flex justify-center mt-4 mb-20'>
+            <div className='flex justify-center mx-8 mt-4 mb-20'>
                 <Link to='/status'>
-                <div className='w-[1380px] h-[156px] bg-primary rounded-full inline-flex'>
-                    <div className='ml-48 mt-7'>
+                <div className='h-[156px] bg-primary rounded-full inline-flex'>
+                    <div className='ml-20 mt-7'>
                         <div className='w-[66px] h-[66px] bg-[#E6E6E6] rounded-full'>
                             <p className='text-center pt-4 text-[22px] font-medium text-font'>4</p>
                         </div>
                         <p className='text-center text-[22px] font-semibold tracking-wider text-font mt-2 underline'>Kirim</p>
                     </div>
-                    <div className='ml-40 mt-7'>
+                    <div className='ml-20 mt-7'>
                         <div className='w-[66px] h-[66px] bg-[#E6E6E6] rounded-full'>
                             <p className='text-center pt-4 text-[22px] font-medium text-font'>2</p>
                         </div>
                         <p className='text-center text-[22px] font-semibold tracking-wider text-font mt-2'>Tinjau</p>
                     </div>
-                    <div className='ml-40 mt-7'>
+                    <div className='ml-20 mt-7'>
                         <div className='w-[66px] h-[66px] bg-[#E6E6E6] rounded-full'>
                             <p className='text-center pt-4 text-[22px] font-medium text-font'>0</p>
                         </div>
                         <p className='text-center text-[22px] font-semibold tracking-wider text-font mt-2'>Revisi</p>
                     </div>
-                    <div className='ml-40 mt-7'>
+                    <div className='ml-20 mt-7'>
                         <div className='w-[66px] h-[66px] bg-[#E6E6E6] rounded-full'>
                             <p className='text-center pt-4 text-[22px] font-medium text-font'>20</p>
                         </div>
                         <p className='text-center text-[22px] font-semibold tracking-wider text-font mt-2'>Terbit</p>
                     </div>
-                    <div className='ml-40 mt-7'>
+                    <div className='ml-20 mr-20 mt-7'>
                         <div className='w-[66px] h-[66px] bg-[#E6E6E6] rounded-full'>
                             <p className='text-center pt-4 text-[22px] font-medium text-font'>0</p>
                         </div>
@@ -96,7 +96,7 @@ function Status () {
                 </Link>
             </div>
             <div className='mb-16 ml-12'>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {menu.map((menu) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>

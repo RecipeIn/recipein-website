@@ -231,9 +231,9 @@ function Recipe() {
                 <p>Jelajahi rasa baru dan buktikan bahwa setiap orang bisa menjadi chef handal.</p>
                 <p>Mulai petualangan kuliner Anda sekarang!</p>
             </div>
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Resep Terbaru</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Resep Terbaru</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {newRecipe.map((newRecipe) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
@@ -261,9 +261,9 @@ function Recipe() {
                 ))}
                 </div>
             </div>
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Rekomendasi Makanan Mingguan</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Rekomendasi Makanan Mingguan</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {weeklyMeals.map((weeklyMeals) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
@@ -291,9 +291,9 @@ function Recipe() {
                 ))}
                 </div>
             </div>
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Rekomendasi Minuman Mingguan</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Rekomendasi Minuman Mingguan</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {weeklyDrinks.map((weeklyDrinks) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
@@ -321,9 +321,9 @@ function Recipe() {
                 ))}
                 </div>
             </div>
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Aneka Sup</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Aneka Sup</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {variousSoup.map((variousSoup) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
@@ -351,9 +351,9 @@ function Recipe() {
                 ))}
                 </div>
             </div>
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Aneka Seblak</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Aneka Seblak</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {variousSeblak.map((variousSeblak) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>

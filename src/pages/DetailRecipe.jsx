@@ -143,19 +143,23 @@ function DetailRecipe() {
                     <Link to='/viewprofile'><p className='text-[18px] text-primary tracking-wider ml-2'>Dapur Amanda</p></Link>
                     <p className='text-[18px] text-font tracking-wider ml-2'>| Diperbarui pada 15 Agustus 2023</p>
                 </div>
-                <div className='flex mt-8 mb-8 ml-8'>
-                    <img src='/src/assets/img/dsalad.png' className='w-[472px] h-[299px] rounded-[8px]'/>
-                    <img src='/src/assets/img/dsalad2.png' className='w-[472px] h-[299px] rounded-[8px] ml-12'/>
-                    <img src='/src/assets/img/dsalad3.png' className='w-[472px] h-[299px] rounded-[8px] ml-12'/>
+                <div className='flex justify-center items-center'>
+                    <div className='flex justify-between px-8'>
+                        <img src='/src/assets/img/dsalad.png' className='w-[400px] h-[200px] rounded-[8px]'/>
+                        <img src='/src/assets/img/dsalad2.png' className='w-[400px] h-[200px] rounded-[8px] ml-12'/>
+                        <img src='/src/assets/img/dsalad3.png' className='w-[400px] h-[200px] rounded-[8px] ml-12'/>
+                    </div>
                 </div>
-                <div className='flex mt-2 ml-28 mb-4'>
-                    <img src='/src/assets/img/step.png' className='w-[242px] h-[152px] rounded-[8px]'/>
-                    <img src='/src/assets/img/step-2.png' className='w-[242px] h-[152px] rounded-[8px] ml-8'/>
-                    <img src='/src/assets/img/step-3.png' className='w-[242px] h-[152px] rounded-[8px] ml-8'/>
-                    <img src='/src/assets/img/step-4.png' className='w-[242px] h-[152px] rounded-[8px] ml-8'/>
-                    <img src='/src/assets/img/step-5.png' className='w-[242px] h-[152px] rounded-[8px] ml-8'/>
+                <div className='flex justify-center items-center'>
+                    <div className='flex mt-4 justify-between'>
+                        <img src='/src/assets/img/step.png' className='w-[190px] h-[100px] rounded-[8px]'/>
+                        <img src='/src/assets/img/step-2.png' className='w-[190px] h-[100px] rounded-[8px] ml-12'/>
+                        <img src='/src/assets/img/step-3.png' className='w-[190px] h-[100px] rounded-[8px] ml-12'/>
+                        <img src='/src/assets/img/step-4.png' className='w-[190px] h-[100px] rounded-[8px] ml-12'/>
+                        <img src='/src/assets/img/step-5.png' className='w-[190px] h-[100px] rounded-[8px] ml-12'/>
+                    </div>
                 </div>
-                <div className='flex justify-center -ml-8'>
+                <div className='flex justify-center items-center'>
                     <div className='bg-[#E6E6E6] w-[1420px] h-[100px] mt-4 mb-4 inline-flex'>
                         <div className='flex flex-col mt-6 ml-40 text-center'>
                             <p className='text-[18px] font-semibold tracking-wider'>Waktu Persiapan</p>
@@ -201,8 +205,8 @@ function DetailRecipe() {
                     </div>
                 </div>
                 <div className='mt-8'>
-                    <p className='text-[30px] font-extrabold text-font ml-20'>Bahan-bahan</p>
-                    <div className='grid grid-cols-2 ml-20'>
+                    <p className='text-[30px] font-extrabold text-font ml-12'>Bahan-bahan</p>
+                    <div className='grid grid-cols-2 ml-12'>
                         <div className='text-font'>
                             <p className='text-[24px] font-extrabold'>Saus:</p>
                             {ingredients.map((ingredients) => (
@@ -224,8 +228,8 @@ function DetailRecipe() {
                     </div>
                 </div>
                 <div className='mt-8'>
-                    <p className='text-[30px] font-extrabold text-font ml-20'>Langkah-langkah</p>
-                    <div className='grid grid-cols-2 ml-20'>
+                    <p className='text-[30px] font-extrabold text-font ml-12'>Langkah-langkah</p>
+                    <div className='grid grid-cols-2 ml-12'>
                         <div className='text-font'>
                             <p className='font-bold text-[24px]'>Langkah 1</p>
                             <p className='text-[18px] font-medium tracking-wide w-[600px]'>Untuk sausnya: Didihkan jus jeruk, jus lemon, gula merah, kulit jeruk, dan kulit lemon dalam panci dengan api sedang-besar.</p>
@@ -243,34 +247,34 @@ function DetailRecipe() {
                         </div>
                     </div>
                 </div>
-                <p className='text-[30px] font-extrabold text-font mt-8 ml-20'>Langkah-langkah</p>
-                <div className='mt-4 flex'>
-                    <div className='bg-[#E6E6E6] w-[436px] h-[548px] mb-8 ml-20 pt-4 px-4 text-font'>
+                <p className='text-[30px] font-extrabold text-font mt-8 ml-12'>Kandungan Nutrisi</p>
+                <div className='mt-4 flex justify-between'>
+                    <div className='bg-[#E6E6E6] w-[300px] h-[548px] mb-8 ml-12 pt-4 px-4 text-font'>
                         <p className='text-[18px] tracking-wide'>Porsi Per Resep : 2</p>
                         <p className='text-[18px] tracking-wide'>Kalori : 155%</p>
-                        <hr className="border-[1px] border-font mt-4 w-[400px]"/>
+                        <hr className="border-[1px] border-font mt-4 w-[270px]"/>
                         <p className='text-[18px] tracking-wide text-right'>% Nilai Harian*</p>
-                        <hr className="border-[1px] border-font mt-1 mb-1 w-[400px]"/>
+                        <hr className="border-[1px] border-font mt-1 mb-1 w-[270px]"/>
                         {nutritionFacts.map((nutritionFacts) => (
                         <div>
                             <div className='flex justify-between'>
                                 <p className='text-[18px] tracking-wide'><span className='font-bold'>{nutritionFacts.kandungan} : </span>{nutritionFacts.takaran}</p>
                                 <p className='text-[18px] tracking-wide text-right'>{nutritionFacts.presentase}</p>
                             </div>
-                            <hr className="border-[1px] border-font mt-1 mb-1 w-[400px]"/>
+                            <hr className="border-[1px] border-font mt-1 mb-1 w-[270px]"/>
                         </div>
                         ))}
                     </div>
                     <div className='ml-8 text-font'>
                         <p className='text-[18px] tracking-wide w-[1000px]'><span className='font-bold'>* </span>Persen Nilai Harian didasarkan pada diet 2.000 kalori. Nilai harian Anda mungkin lebih tinggi atau lebih rendah tergantung pada kebutuhan kalori Anda.</p>
-                        <p className='text-[18px] tracking-wide w-[1000px] mt-1'><span className='font-bold'>** </span>Informasi nutrisi tidak tersedia untuk semua bahan. Jumlahnya didasarkan pada data nutrisi yang tersedia.</p>
+                        <p className='text-[18px] tracking-wide w-[800px] mt-1'><span className='font-bold'>** </span>Informasi nutrisi tidak tersedia untuk semua bahan. Jumlahnya didasarkan pada data nutrisi yang tersedia.</p>
                         <p className='text-[18px] tracking-wide w-[1000px] mt-1'><span className='font-bold'>*** </span>Informasi saat ini tidak tersedia untuk nutrisi ini. Jika Anda mengikuti diet ketat secara medis, silakan berkonsultasi dengan dokter atau ahli diet terdaftar sebelum menyiapkan resep ini untuk konsumsi pribadi.</p>
                     </div>
                 </div>
-                <p className='text-[30px] font-extrabold text-font mt-8 ml-20'>Ulasan</p>
-                <div className='inline-flex'>
-                    <div className='bg-primary w-[618px] h-[564px] rounded-[16px] ml-[70px] mt-4 mb-12 p-3.5'>
-                        <div className='bg-[#E6E6E6] w-[590px] h-[536px] rounded-[8px] p-4'>
+                <p className='text-[30px] font-extrabold text-font mt-8 ml-12'>Ulasan</p>
+                <div className='flex justify-between px-10'>
+                    <div className='bg-primary w-[600px] h-[564px] rounded-[16px] mt-4 mb-12 p-3.5'>
+                        <div className='bg-[#E6E6E6] w-[480px] h-[536px] rounded-[8px] p-4'>
                             <div className='inline-flex'>
                                 <img src={profile} className='w-[90px] h-[90px] rounded-full'/>
                                 <p className='text-[26px] font-extrabold text-font mt-6 ml-4'>Salad Buah Segar</p>
@@ -285,7 +289,7 @@ function DetailRecipe() {
                             </div>
                             <p className='text-[16px] tracking-wider text-[#B3B3B3]'><span className='text-[18px] font-bold text-font'>Ulasan Anda </span> (opsional)</p>
                             <div className='mt-2  text-font text-[16px]'>
-                                <textarea type="text" className="bg-white w-[550px] h-[156px] tracking-wider rounded-[10px] block px-4 py-3 shadow-lg resize-none" placeholder="Masukkan ulasan" required></textarea>
+                                <textarea type="text" className="bg-white w-[450px] h-[156px] tracking-wider rounded-[10px] block px-4 py-3 shadow-lg resize-none" placeholder="Masukkan ulasan" required></textarea>
                             </div>
                             <div className='flex justify-end'>
                                 <div className='inline-flex text-font mt-[105px] mr-2'>
@@ -295,7 +299,7 @@ function DetailRecipe() {
                             </div>
                         </div>
                     </div>
-                    <div className='ml-20 mt-4'>
+                    <div className='ml-12 mt-4'>
                         <hr className="border-[1px] border-font mt-1 mb-1 w-[728px]"/>
                         <div className='flex justify-end'>
                             <div className='inline-flex mr-2'>

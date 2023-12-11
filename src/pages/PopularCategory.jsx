@@ -126,9 +126,9 @@ function PopularCategory() {
                 <p>untuk hari-hari sibuk hingga santapan istimewa untuk akhir pekan, temukan variasi</p>
                 <p>lezat dan bernutrisi yang akan membuat setiap pagimu istimewa.</p>
             </div>
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Lezat dan Cepat</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Lezat dan Cepat</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {easyMeals.map((easyMeals) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
@@ -156,9 +156,9 @@ function PopularCategory() {
                 ))}
                 </div>
             </div>
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Roti Bakar Simple</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Roti Bakar Simple</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {simpleToast.map((simpleToast) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>

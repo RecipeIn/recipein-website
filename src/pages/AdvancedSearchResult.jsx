@@ -157,8 +157,8 @@ function AdvancedSearchResult() {
                 <p className='text-[22px] font-medium tracking-wide text-font'><span className='font-bold'>Kecualikan Bahan: </span>Gula, Pemanis, MSG, Pewarna</p>
             </div>
 
-            <div className='mb-16 ml-12'>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {result.map((result) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
