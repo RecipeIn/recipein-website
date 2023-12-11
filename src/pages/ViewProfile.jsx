@@ -85,17 +85,17 @@ function ViewProfile() {
         <section className='body-font font-nunito w-screen h-full'>
             <Navbar/>
             <div className='flex justify-center mt-12 mb-12'>
-                <div className='bg-[#E6E6E6] w-[1380px] h-[336px] pt-7 inline-flex'>
-                    <img src={profile} className='w-[280px] h-[280px] ml-8'/>
+                <div className='bg-[#E6E6E6] w-[1250px] h-[300px] pt-5 rounded-2xl inline-flex'>
+                    <img src={profile} className='w-[260px] h-[260px] ml-4'/>
                     <div className='flex flex-col'>
-                        <p className='text-font text-[52px] font-extrabold ml-6'>Dapur Amanda</p>
+                        <p className='text-font text-[36px] font-extrabold ml-6'>Dapur Amanda</p>
                         <p className='w-[918px] text-font text-[20px] tracking-wide ml-6 mt-4'>Salam hangat dari dapur yang penuh aroma dan kehangatan! Saya adalah Amanda, seorang pecinta masakan yang selalu mencari inspirasi baru untuk menghidangkan kreasi kuliner istimewa.</p>
                     </div>
                 </div>
             </div>
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Koleksi Resep</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Koleksi Resep</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {collectionRecipe.map((collectionRecipe) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>

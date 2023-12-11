@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from "react-router-dom";
 import Navbar from '../component/Navbar';
+import Navbar2 from '../component/Navbar';
 import Footer from '../component/Footer'
 import bg2 from '../assets/img/bg2.jpg'
 import { MdNavigateNext } from "react-icons/md";
@@ -195,22 +196,22 @@ function Homepage() {
     return (
         <>
         <section className='body-font font-nunito w-screen h-full'>
-            <Navbar/>
+            <Navbar2/>  
             <div className=''>
                 <img src={bg2}className='w-screen h-[600px]'/>
                 <p className='w-[600px] absolute top-52 ml-12 text-[64px] font-bold text-white tracking-wide'>Jadilah Koki Di Dapurmu Sendiri</p>
                 <p className='w-[500px] absolute top-[400px] ml-12 text-[28px] font-medium text-white tracking-wide'>Dari Sarapan hingga Makan Malam, Kami Siap Membantu Anda</p>
                 <ul className="absolute top-[510px] ml-12">
                     <li className='bg-primary rounded-[4px] w-[178px] h-[45px] inline-flex justify-between border-none'>
-                        <a href="/recipe" className="ml-4 mt-2 text-secondary text-[18px] font-bold hover:text-secondary">Jelajahi Resep</a>
+                        <a href="/recipe" className="ml-4 mt-2 text-font text-[18px] font-bold hover:text-secondary">Jelajahi Resep</a>
                         <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color="#1E2C48"/>
                     </li>
                 </ul>
             </div>
             <div>
                 <p className='text-font font-extrabold text-[48px] mt-8 ml-16 mb-8'>Kategori Populer</p>
-                <div className='inline-flex'>
-                    <div className='flex flex-col ml-[70px]'>
+                <div className='flex justify-between px-10'>
+                    <div className='flex flex-col'>
                         <Link to="/pcategory">
                         <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl'>
                             <img src={sarapan} className='pt-5 ml-3'/>
@@ -220,7 +221,7 @@ function Homepage() {
                         </div>
                         </Link>
                     </div>
-                    <div className='flex flex-col ml-16'>
+                    <div className='flex flex-col'>
                         <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl'>
                             <img src={lunch} className='mt-8 ml-8 w-[89px]'/>
                         </div>
@@ -228,7 +229,7 @@ function Homepage() {
                         <p className='text-[20px] font-medium text-font mt-8 ml-[6px] mb-4'>MAKAN SIANG</p>
                         </div>
                     </div>
-                    <div className='flex flex-col ml-16'>
+                    <div className='flex flex-col'>
                         <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl'>
                             <img src={dinner} className='mt-6 ml-7 w-[99px]'/>
                         </div>
@@ -236,7 +237,7 @@ function Homepage() {
                         <p className='text-[20px] font-medium text-font mt-8 ml-[6px] mb-4'>MAKAN MALAM</p>
                         </div>
                     </div>
-                    <div className='flex flex-col ml-16'>
+                    <div className='flex flex-col'>
                         <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl'>
                             <img src={juice} className='mt-8 ml-8 w-[89px]'/>
                         </div>
@@ -244,7 +245,7 @@ function Homepage() {
                         <p className='text-[20px] font-medium text-font mt-8 ml-8 mb-4'>JUS BUAH</p>
                         </div>
                     </div>
-                    <div className='flex flex-col ml-16'>
+                    <div className='flex flex-col'>
                         <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl'>
                             <img src={sambal} className='mt-6 ml-6 w-[109px]'/>
                         </div>
@@ -252,7 +253,7 @@ function Homepage() {
                         <p className='text-[20px] font-medium text-font mt-8 ml-[42px] mb-4'>SAMBAL</p>
                         </div>
                     </div>
-                    <div className='flex flex-col ml-16'>
+                    <div className='flex flex-col'>
                         <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl'>
                             <img src={seblak} className='mt-7 ml-6 w-[109px]'/> 
                         </div>
@@ -260,7 +261,7 @@ function Homepage() {
                         <p className='text-[20px] font-medium text-font mt-8 ml-[44px] mb-4'>SEBLAK</p>
                         </div>
                     </div>
-                    <div className='flex flex-col ml-16'>
+                    <div className='flex flex-col'>
                         <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl'>
                             <img src={sop} className='mt-8 ml-8 w-[89px]'/>
                         </div>
@@ -270,9 +271,9 @@ function Homepage() {
                     </div>
                 </div>
             </div>
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Rekomendasi Makanan Mingguan</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Rekomendasi Makanan Mingguan</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {weeklyMeals.map((weeklyMeals) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
@@ -300,9 +301,9 @@ function Homepage() {
                 ))}
                 </div>
             </div>
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Rekomendasi Minuman Mingguan</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Rekomendasi Minuman Mingguan</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {weeklyDrinks.map((weeklyDrinks) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
@@ -331,9 +332,9 @@ function Homepage() {
                 </div>
             </div>
 
-            <div className='mb-24 ml-16'>
-                <p className='text-font font-extrabold text-[48px] mb-4'>Koleksi Resep</p>
-                <div className='grid grid-cols-2 gap-8 ml-6'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] ml-12'>Koleksi Resep</p>
+                <div className='grid grid-cols-2 gap-x-4 px-5 ml-2'>
                     {collection.map((collection) => (
                     <div className='rounded-[8px] bg-primary w-[646px] h-[470px] shadow-2xl mt-8'>
                         <img src={collection.photo} className='rounded-[8px]'/>
@@ -349,9 +350,9 @@ function Homepage() {
                 </div>
             </div>
 
-            <div className='mb-16 ml-12'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-12 ml-4'>Resep Terbaru</p>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Resep Terbaru</p>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {newRecipe.map((newRecipe) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>

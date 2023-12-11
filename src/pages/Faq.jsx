@@ -40,15 +40,15 @@ function FAQ() {
       <section className="body-font font-nunito w-screen h-auto">
         <Navbar />
         <div className="content">
-          <div className="flex  ">
-            <div className="pl-12 w-1/2 mt-7 mb-32 pt-12 p-4">
+          <div className="flex justify-center space-x-4">
+            <div className="w-1/2 mt-7 mb-32 pt-12 p-4">
               <p className="text-[33px] text-font ml-32 MB-0 font-extrabold ">FAQ</p>
               <p className="text-[25px] text-font ml-32 ">
                 Selamat datang di halaman FAQ kami! Di sini, kami menyajikan jawaban untuk pertanyaan yang sering diajukan agar Anda dapat dengan mudah menemukan informasi yang Anda cari. Kami mengerti bahwa setiap pengalaman pengguna unik,
                 dan FAQ kami dirancang untuk memberikan panduan cepat dan jelas. Temukan jawaban untuk pertanyaan umum atau dapatkan bantuan lebih lanjut melalui saluran dukungan Hubungi Kami.
               </p>
             </div>
-            <div className=" w-1/2 mt-7 pt-12 pl-32 p-4">
+            <div className=" w-1/2 mt-7 pt-12 p-4">
               <img src={faqimg} className=" h-auto object fit-cover" alt="" />
             </div>
           </div>

@@ -154,8 +154,8 @@ function SearchResult() {
                 <p className='text-[52px] text-font font-bold'>16 Resep Tersedia</p>
                 <p className='mt-2 text-[22px] font-medium tracking-wide text-font'><span className='font-bold'>Cari Resep: </span>Salad</p>
             </div>
-            <div className='mb-16 ml-12'>
-                <div className='grid grid-cols-4 gap-x-3 gap-y-8'>
+            <div className='mb-16'>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {result.map((result) => (
                     
                     <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>

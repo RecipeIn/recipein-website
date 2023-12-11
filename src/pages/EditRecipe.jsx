@@ -40,37 +40,39 @@ function EditRecipe () {
                     <p className='text-font font-extrabold text-[26px] mt-4 ml-12 mb-4'>Informasi Awal</p>
                     <hr className="border-[1px] border-[#979797] mb-4" />
 
-                    <div className='ml-12 mt-8 inline-flex text-font'>
+                    <div className='mt-8 flex justify-between px-8 text-font'>
                         <div className='flex flex-col'>
                             <label htmlFor="rname" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Nama Resep</label>
-                            <input type="text" id="rname" className="bg-white w-[595px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" value="Salad Buah Segar" required></input>
+                            <input type="text" id="rname" className="bg-white w-[500px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" placeholder="Contoh: Seblak Ceker" required></input>
                         </div>
-                        <div className='flex flex-col ml-10'>
+                        <div className='flex flex-col'>
                             <label htmlFor="category" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Jenis/Kategori</label>
-                            <input type="text"id="category" className="bg-white w-[595px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value="Salad" required></input>
+                            <input type="text"id="category" className="bg-white w-[550px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" placeholder="Contoh: Sarapan" required></input>
                         </div>
-                        <div className='flex flex-col ml-10'>
+                        <div className='flex flex-col'>
                             <label htmlFor="portion" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Porsi</label>
-                            <input type="number" min="1" id="portion" className="bg-white w-[100px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value="2" required></input>
+                            <input type="number" min="1" id="portion" className="bg-white w-[100px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" placeholder="1" required></input>
                         </div>
                     </div>
 
-                   <div className='ml-12 mt-8 inline-flex text-font'>
-                        <div className='flex flex-col'>
-                            <label htmlFor="timeprep" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Waktu Persiapan</label>
-                            <div className='inline-flex'>
-                                <input type="text" id="timeprep" className="bg-white w-[220px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" value="15" required></input>
-                                <p className='text-[20px] mt-2 ml-2'>Menit</p>
+                    <div className='mt-8 inline-flex text-font px-8'>
+                        <div className='inline-flex'>
+                            <div className='flex flex-col'>
+                                <label htmlFor="timeprep" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Waktu Persiapan</label>
+                                <div className='inline-flex'>
+                                    <input type="text" id="timeprep" className="bg-white w-[100px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="1" required></input>
+                                    <p className='text-[20px] mt-2 ml-2'>Menit</p>
+                                </div>
+                            </div>
+                            <div className='flex flex-col ml-8'>
+                                <label htmlFor="timecook" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Waktu Memasak</label>
+                                <div className='inline-flex'>
+                                    <input type="text" id="timecook" className="bg-white w-[100px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="1" required></input>
+                                    <p className='text-[20px] mt-2 ml-2'>Menit</p>
+                                </div>
                             </div>
                         </div>
-                        <div className='flex flex-col ml-8'>
-                            <label htmlFor="timecook" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Waktu Memasak</label>
-                            <div className='inline-flex'>
-                                <input type="text" id="timecook" className="bg-white w-[220px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" value="12" required></input>
-                                <p className='text-[20px] mt-2 ml-2'>Menit</p>
-                            </div>
-                        </div>
-                        <div className='flex flex-col ml-12'>
+                        <div className='flex flex-col ml-44'>
                             <p className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Foto (maksimal 8)</p>
                             <div className='grid grid-cols-4 gap-x-3 gap-y-6'>
                                 <div className=''>
@@ -104,9 +106,9 @@ function EditRecipe () {
                             </div>
                         </div>
                     </div>
-                    <div className='ml-12 -mt-52'>
+                    <div className='px-8 -mt-52'>
                         <label htmlFor="desc" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Deskripsi</label>
-                        <textarea type="text" id="uname" className="bg-white w-[595px] h-[200px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" value="Salad buah ini sangat cocok untuk segala acara. Tidak pernah ada sisa! Ini adalah salah satu resep salad buah favorit saya, karena menurut saya saus jeruknya benar-benar cocok. Salad ini akan terasa lebih enak jika anda membiarkannya meresap lebih lama ke dalam sari buahnya. Saya lebih suka 3 hingga 4 jam di lemari es sebelum saya menyajikannya." required></textarea>
+                        <textarea type="text" id="uname" className="bg-white w-[500px] h-[200px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="Masukkan deskripsi" required></textarea>
                     </div>
 
                     <p className='text-font font-extrabold text-[26px] mt-12 ml-12 mb-4'>Bahan-bahan</p>
@@ -120,32 +122,32 @@ function EditRecipe () {
                             <div className='flex flex-col ml-12'>
                                 <p className='text-[22px] font-bold tracking-wide text-font'>Saus</p>
                                 <div className='inline-flex'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value="Jus jeruk segar" required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value="Jus jeruk segar" required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='⅔' required></input>
                                     <Measure />
                                 </div>
                                 <div className='inline-flex mt-2'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Jus lemon segar' required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Jus lemon segar' required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='⅓' required></input>
                                     <Measure/>
                                 </div>
                                 <div className='inline-flex mt-2'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Gula Merah Kemasan' required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Gula Merah Kemasan' required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='⅓' required></input>
                                     <Measure/>
                                 </div>
                                 <div className='inline-flex mt-2'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Parutan Kulit Jeruk' required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Parutan Kulit Jeruk' required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='½' required></input>
                                     <Measure/>
                                 </div>
                                 <div className='inline-flex mt-2'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Parutan Kulit Lemon' required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Parutan Kulit Lemon' required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='½' required></input>
                                     <Measure/>
                                 </div>
                                 <div className='inline-flex mt-2'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Ekstrak Vanilla' required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Ekstrak Vanilla' required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='1' required></input>
                                     <Measure/>
                                 </div>
@@ -156,37 +158,37 @@ function EditRecipe () {
                             <div className='flex flex-col ml-12'>
                                 <p className='text-[22px] font-bold tracking-wide text-font'>Salad</p>
                                 <div className='inline-flex'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Nanas segar potong dadu' required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Nanas segar potong dadu' required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='2' required></input>
                                     <Measure/>
                                 </div>
                                 <div className='inline-flex mt-2'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Stroberi kupas dan iris' required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Stroberi kupas dan iris' required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='2' required></input>
                                     <Measure/>
                                 </div>
                                 <div className='inline-flex mt-2'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Kiwi kupas dan iris' required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Kiwi kupas dan iris' required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='3' required></input>
                                     <Measure/>
                                 </div>
                                 <div className='inline-flex mt-2'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Pisang iris' required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Pisang iris' required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='3' required></input>
                                     <Measure/>
                                 </div>
                                 <div className='inline-flex mt-2'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Jeruk kupas dan belah' required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Jeruk kupas dan belah' required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='2' required></input>
                                     <Measure/>
                                 </div>
                                 <div className='inline-flex mt-2'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Anggur tanpa biji' required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Anggur tanpa biji' required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='1' required></input>
                                     <Measure/>
                                 </div>
                                 <div className='inline-flex mt-2'>
-                                    <input type="text" className="bg-white w-[373px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Blueberry' required></input>
+                                    <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" value='Blueberry' required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" value='2' required></input>
                                     <Measure/>
                                 </div>
@@ -205,25 +207,25 @@ function EditRecipe () {
                         <div className='flex flex-col ml-12'>
                             <div className='mb-4'>
                                 <p className='text-[18px] font-bold tracking-wide text-font mb-2'>Langkah 1</p>
-                                <textarea type="text" id="uname" className="bg-white w-[595px] h-[128px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-4 py-3 text-font" value="Untuk sausnya: Didihkan jus jeruk, jus lemon, gula merah, kulit jeruk, dan kulit lemon dalam panci dengan api sedang-besar." required></textarea>
+                                <textarea type="text" id="uname" className="bg-white w-[500px] h-[128px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-4 py-3 text-font" value="Untuk sausnya: Didihkan jus jeruk, jus lemon, gula merah, kulit jeruk, dan kulit lemon dalam panci dengan api sedang-besar." required></textarea>
                             </div>
                             <div className='mb-4'>
                                 <p className='text-[18px] font-bold tracking-wide text-font mb-2'>Langkah 2</p>
-                                <textarea type="text" id="uname" className="bg-white w-[595px] h-[128px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-4 py-3 text-font" value="Kurangi panas menjadi sedang-rendah dan biarkan mendidih hingga agak mengental, sekitar 5 menit." required></textarea>
+                                <textarea type="text" id="uname" className="bg-white w-[500px] h-[128px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-4 py-3 text-font" value="Kurangi panas menjadi sedang-rendah dan biarkan mendidih hingga agak mengental, sekitar 5 menit." required></textarea>
                             </div>
                             <div className='mb-4'>
                                 <p className='text-[18px] font-bold tracking-wide text-font mb-2'>Langkah 3</p>
-                                <textarea type="text" id="uname" className="bg-white w-[595px] h-[128px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-4 py-3 text-font" value="Angkat dari api dan masukkan ekstrak vanila. Sisihkan hingga dingin." required></textarea>
+                                <textarea type="text" id="uname" className="bg-white w-[500px] h-[128px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-4 py-3 text-font" value="Angkat dari api dan masukkan ekstrak vanila. Sisihkan hingga dingin." required></textarea>
                             </div>
                         </div>
                         <div className='flex flex-col mr-12'>
                             <div className='mb-4'>
                                 <p className='text-[18px] font-bold tracking-wide text-font mb-2'>Langkah 4</p>
-                                <textarea type="text" id="uname" className="bg-white w-[595px] h-[128px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-4 py-3 text-font" value="Untuk salad: Lapisi buah-buahan dalam mangkuk kaca bening besar dengan urutan sebagai berikut: nanas, stroberi, buah kiwi, pisang, jeruk, anggur, dan blueberry." required></textarea>
+                                <textarea type="text" id="uname" className="bg-white w-[500px] h-[128px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-4 py-3 text-font" value="Untuk salad: Lapisi buah-buahan dalam mangkuk kaca bening besar dengan urutan sebagai berikut: nanas, stroberi, buah kiwi, pisang, jeruk, anggur, dan blueberry." required></textarea>
                             </div>
                             <div className='mb-4'>
                                 <p className='text-[18px] font-bold tracking-wide text-font mb-2'>Langkah 5</p>
-                                <textarea type="text" id="uname" className="bg-white w-[595px] h-[128px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-4 py-3 text-font" value="Tuangkan saus dingin di atas buah; tutup dan dinginkan selama 3 hingga 4 jam sebelum disajikan." required></textarea>
+                                <textarea type="text" id="uname" className="bg-white w-[500px] h-[128px] tracking-wider text-base border resize-none border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-4 py-3 text-font" value="Tuangkan saus dingin di atas buah; tutup dan dinginkan selama 3 hingga 4 jam sebelum disajikan." required></textarea>
                             </div>
                         </div>
                     </div>
