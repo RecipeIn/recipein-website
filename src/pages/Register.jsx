@@ -1,10 +1,30 @@
 import { useState } from 'react'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import bg from "../assets/img/bg.png"
 import logo from "../assets/img/Logo.png"
+import axios from "axios";
 
 function Register() {
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate();
+
+    const handleRegister = async () => {
+        try {
+          const response = await axios.post('https://api.recepin.my.id/api/signup', { mode: 'cors' }, {
+            username: username,
+            email: email,
+            password: password,
+          });
     
+          const { status, message, user_id } = response.data;
+    
+          history.push('/');
+        } catch (error) {
+          console.error('Error during register:', error.message);
+        }
+    };
     return (
         <>
         <section className="body-font font-nunito w-screen h-auto">
@@ -22,17 +42,17 @@ function Register() {
                 <div className='text-font ml-52'>
                     <p className='text-[32px] font-extrabold pt-4'>Daftar</p>
                     <p className='text-lg tracking-wide'>Silakan masukkan data anda</p>
-                    <label for="name" className="block text-lg font-bold justify-center pt-2 pb-1">Nama Pengguna</label>
-                    <input type="text" id="name" className="bg-field w-[400px] h-[40px]  text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="Masukkan nama pengguna" required></input>
-                    <label for="email" className="block text-lg font-bold justify-center pt-2 pb-1">Email</label>
-                    <input type="email" id="email" className="bg-field w-[400px] h-[40px]  text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="Masukkan email" required></input>
-                    <label for="password" className="block text-lg font-bold justify-center pt-2 pb-1">Kata Sandi</label>
-                    <input type="password" id="password" className="bg-field w-[400px] h-[40px]  text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="Masukkan kata sandi" required></input>
-                    <label for="cpassword" className="block text-lg font-bold justify-center pt-2 pb-1">Konfirmasi Kata Sandi</label>
-                    <input type="password" id="cpassword" className="bg-field w-[400px] h-[40px]  text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="Ulangi kata sandi" required></input>
+                    <label htmlFor="name" className="block text-lg font-bold justify-center pt-2 pb-1">Nama Pengguna</label>
+                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} id="name" className="bg-field w-[400px] h-[40px]  text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="Masukkan nama pengguna" required></input>
+                    <label htmlFor="email" className="block text-lg font-bold justify-center pt-2 pb-1">Email</label>
+                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} id="email" className="bg-field w-[400px] h-[40px]  text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="Masukkan email" required></input>
+                    <label htmlFor="password" className="block text-lg font-bold justify-center pt-2 pb-1">Kata Sandi</label>
+                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} id="password" className="bg-field w-[400px] h-[40px]  text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="Masukkan kata sandi" required></input>
+                    {/* <label for="cpassword" className="block text-lg font-bold justify-center pt-2 pb-1">Konfirmasi Kata Sandi</label>
+                    <input type="password" id="cpassword" className="bg-field w-[400px] h-[40px]  text-lg rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font" placeholder="Ulangi kata sandi" required></input> */}
                     <input id="terms" type="checkbox" className="w-[17px] h-[17px] bg-field border border-font mt-4 " ></input>
-                    <label for="terms" className="text-[16px] ml-2">Saya menerima ketentuan perjanjian</label>
-                    <Link to='/login'><button type="submit" className="w-[400px] bg-primary font-bold rounded-[16px] text-[20px] mt-4 px-5 py-3 text-center text-font">Daftar</button></Link>
+                    <label htmlFor="terms" className="text-[16px] ml-2">Saya menerima ketentuan perjanjian</label>
+                    <button type="submit" onClick={handleRegister} className="w-[400px] bg-primary font-bold rounded-[16px] text-[20px] mt-12 px-5 py-3 text-center text-font">Daftar</button>
                     <p className='text-[14px] font-medium pl-32 pt-2'>Sudah punya akun? <Link to="/login" className="text-font hover:text-font">Masuk</Link></p>
 
                     <div className='inline-flex'>
@@ -41,9 +61,9 @@ function Register() {
                         <hr className="border-[1px] border-[#808080] mt-6 w-[148px] ml-4" />
                     </div>
 
-                    <div class="pl-[85px] justify-center pt-2 dark:bg-gray-800">
-                        <button class="text-[14px] font-medium px-4 py-2 border flex gap-2 border-slate-300 shadow-xl dark:border-slate-700 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
-                        <img class="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="google logo"/>
+                    <div className="pl-[85px] justify-center pt-2 dark:bg-gray-800">
+                        <button className="text-[14px] font-medium px-4 py-2 border flex gap-2 border-slate-300 shadow-xl dark:border-slate-700 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
+                        <img className="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="google logo"/>
                         <span>Daftar menggunakan Google</span>
                         </button>
                     </div>
