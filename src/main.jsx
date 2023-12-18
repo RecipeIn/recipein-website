@@ -16,7 +16,7 @@ import DailyNutrition from './pages/DailyNutrition'
 import Homepage from './pages/Homepage'
 import Recipe from './pages/Recipe'
 import Diet from './pages/Diet'
-import PopularCategory from './pages/PopularCategory'
+
 import ViewProfile from './pages/ViewProfile'
 import DetailRecipe from './pages/DetailRecipe'
 import AboutUs from './pages/AboutUs'
@@ -31,6 +31,7 @@ import ContactUs from './pages/ContactUs'
 import FAQ from './pages/FAQ'
 import TNC from './pages/TNC'
 import PP from './pages/PP'
+import DetailCategory from "./pages/DetailCategory.jsx";
 
 const router = createBrowserRouter([
   {
@@ -78,8 +79,8 @@ const router = createBrowserRouter([
     element: <Diet />,
   },
   {
-    path: "/pcategory",
-    element: <PopularCategory />,
+    path: "/dcategory",
+    element: <DetailCategory />,
   },
   {
     path: "/viewprofile",

@@ -95,7 +95,7 @@ function Homepage() {
             <div>
                 <p className='text-font font-extrabold text-[48px] mt-8 ml-16 mb-8'>Kategori Populer</p>
                 <div className='flex justify-between px-20 mb-8'>
-                    {console.log(category)}
+                    {/* {console.log(category)} */}
                     {category.map((cat) => (
                         <CardCategory
                             key={cat.id}
@@ -108,7 +108,7 @@ function Homepage() {
             <div className='mb-16'>
                 <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Rekomendasi Makanan Mingguan</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
-                    {console.log(recipes)}
+                    {/* {console.log(recipes)} */}
                     {recipes.map((recipe) => (
                         <CardRecipe
                             key={recipe.id}
@@ -126,7 +126,7 @@ function Homepage() {
             <div className='mb-16'>
                 <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Rekomendasi Minuman Mingguan</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
-                    {console.log(recipes1)}
+                    {/* {console.log(recipes1)} */}
                     {recipes1.map((recipe) => (
                         <CardRecipe
                             key={recipe.id}
@@ -144,7 +144,7 @@ function Homepage() {
             <div className='mb-16'>
                 <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Resep Terbaru</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
-                    {console.log(recipes2)}
+                    {/* {console.log(recipes2)} */}
                     {recipes2.map((recipe) => (
                         <CardRecipe
                             key={recipe.id}
