@@ -219,6 +219,7 @@ function Recipe() {
     const handleLikeClick = () => {
         setIsLiked((prevIsLiked) => !prevIsLiked);
     }
+    window.scrollTo(0, 0);
     return (
         <>
         <section className='body-font font-nunito w-screen h-full'>

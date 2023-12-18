@@ -72,14 +72,10 @@ function DailyNutrition() {
                                 <input type="text" disabled id="fiber" className="bg-white w-[250] h-[47px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-black" placeholder="0" required></input>
                             </div>
                         </div>
-                        <div className='ml-12 mt-12 inline-flex'>
+                        <div className='mt-8 flex justify-center'>
                             <div className='flex flex-col'>
                                 <label for="protein" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Protein</label>
                                 <input type="text" disabled id="protein" className="bg-white w-[250] h-[47px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-black" placeholder="0" required></input>
-                            </div>
-                            <div className='flex flex-col ml-12'>
-                                <label for="vitamin" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Vitamin</label>
-                                <input type="text" disabled id="vitamin" className="bg-white w-[250] h-[47px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-black" placeholder="0" required></input>
                             </div>
                             <div className='flex flex-col ml-12'>
                                 <label for="fat" className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Lemak</label>

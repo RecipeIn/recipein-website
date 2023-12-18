@@ -23,7 +23,7 @@ function EditProfile() {
             })
             navigate("/login");
         }
-      }, [isLogin, navigate]);
+    }, [isLogin, navigate]);
 
     const handleLogout = async () => {
         navigate("/login");

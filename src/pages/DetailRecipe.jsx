@@ -160,8 +160,8 @@ function DetailRecipe() {
                     </div>
                 </div>
                 <div className='flex justify-center items-center'>
-                    <div className='bg-[#E6E6E6] w-[1420px] h-[100px] mt-4 mb-4 inline-flex'>
-                        <div className='flex flex-col mt-6 ml-40 text-center'>
+                    <div className='bg-[#E6E6E6] w-[1300px] h-[100px] mt-4 mb-4 flex justify-center'>
+                        <div className='flex flex-col mt-6 text-center'>
                             <p className='text-[18px] font-semibold tracking-wider'>Waktu Persiapan</p>
                             <p className='text-[18px] tracking-wider'>&#177; 10 Menit</p>
                         </div>
@@ -265,10 +265,10 @@ function DetailRecipe() {
                         </div>
                         ))}
                     </div>
-                    <div className='ml-8 text-font'>
-                        <p className='text-[18px] tracking-wide w-[1000px]'><span className='font-bold'>* </span>Persen Nilai Harian didasarkan pada diet 2.000 kalori. Nilai harian Anda mungkin lebih tinggi atau lebih rendah tergantung pada kebutuhan kalori Anda.</p>
+                    <div className='mr-8 text-font'>
+                        <p className='text-[18px] tracking-wide w-[900px]'><span className='font-bold'>* </span>Persen Nilai Harian didasarkan pada diet 2.000 kalori. Nilai harian Anda mungkin lebih tinggi atau lebih rendah tergantung pada kebutuhan kalori Anda.</p>
                         <p className='text-[18px] tracking-wide w-[800px] mt-1'><span className='font-bold'>** </span>Informasi nutrisi tidak tersedia untuk semua bahan. Jumlahnya didasarkan pada data nutrisi yang tersedia.</p>
-                        <p className='text-[18px] tracking-wide w-[1000px] mt-1'><span className='font-bold'>*** </span>Informasi saat ini tidak tersedia untuk nutrisi ini. Jika Anda mengikuti diet ketat secara medis, silakan berkonsultasi dengan dokter atau ahli diet terdaftar sebelum menyiapkan resep ini untuk konsumsi pribadi.</p>
+                        <p className='text-[18px] tracking-wide w-[900px] mt-1'><span className='font-bold'>*** </span>Informasi saat ini tidak tersedia untuk nutrisi ini. Jika Anda mengikuti diet ketat secara medis, silakan berkonsultasi dengan dokter atau ahli diet terdaftar sebelum menyiapkan resep ini untuk konsumsi pribadi.</p>
                     </div>
                 </div>
                 <p className='text-[30px] font-extrabold text-font mt-8 ml-12'>Ulasan</p>

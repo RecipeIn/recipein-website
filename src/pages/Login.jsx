@@ -37,12 +37,19 @@ function Login() {
                 setError('Harap isi semua kolom dengan benar.');
                 return;
             }
-            const response = await axios.post('https://api.recepin.my.id/api/login', {
-                email: email,
-                password: password,
+            const response = await fetch('https://api.recepin.my.id/api/login', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
             });
-    
-            const { user_id, access_token } = response.data;
+            if (!response.ok) {
+                throw new Error('Gagal login');
+              }
+            const { user_id, access_token } = response.json;
+            const data = await response.json();
+            console.log('Login berhasil', data);
 
             Swal.fire({
             icon: "success",
@@ -59,6 +66,7 @@ function Login() {
         }   catch (error) {
             console.error('Error during login:', error.message);
             dispatch(setRejected("Login Failed"));
+            setError('Email atau Kata Sandi tidak valid');
         }
     };
 
