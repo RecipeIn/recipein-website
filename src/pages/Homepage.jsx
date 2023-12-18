@@ -170,9 +170,13 @@ function Homepage() {
     
     const getRecipe = async () => {
         try {
-            const response = await axios.get("https://api.recepin.my.id/api/recipe/6");
-            const apiRecipes = response.data;
+            const response = await axios.get("https://api.recepin.my.id/api/recipe");
+            const apiRecipes = response.data.data;
             const recipesArray = Object.values(apiRecipes);
+
+            //kalau data mau dilimit
+            // const recipesArray = Object.values(apiRecipes).slice(0,5);
+
             setRecipes(recipesArray);
             // if (Array.isArray(apiRecipes)) {
             //     setRecipes(apiRecipes);
@@ -272,6 +276,7 @@ function Homepage() {
             <div className='mb-16'>
                 <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Rekomendasi Makanan Mingguan</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
+                    {console.log(recipes)}
                     {recipes.map((recipe) => (
                         <CardRecipe
                             key={recipe.id}
