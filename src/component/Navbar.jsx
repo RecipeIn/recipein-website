@@ -19,12 +19,12 @@ const solutions = [
         href: '/recipe',
     },
     {
-        name: 'Menu Sehat',
-        href: '/diet',
-    },
-    {
         name: 'Tentang',
         href: '/about',
+    },
+    {
+        name: 'Profile',
+        href: '/profile',
     },
 ]
 
@@ -89,7 +89,6 @@ function Navbar () {
                 <div className="hidden lg:flex space-x-8">
                       <Link to="/" className="text-[20px] text-font font-bold hover:text-font">BERANDA</Link>
                       <Link to="/recipe" className="text-[20px] text-font font-bold hover:text-font">RESEP</Link>
-                      <Link to="/diet" className="text-[20px] text-font font-bold hover:text-font">MENU SEHAT</Link>
                       <Link to="/about" className="text-[20px] text-font font-bold hover:text-font">TENTANG KAMI</Link>
                   </div>
                   <div className='flex space-x-4'>
