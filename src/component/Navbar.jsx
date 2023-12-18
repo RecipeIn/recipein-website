@@ -5,7 +5,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { BiSearchAlt } from "react-icons/bi";
 import { AiOutlineUser } from "react-icons/ai";
-import SearchDialog from './SearchDialog';
+import SearchComponent from './SearchDialog';
 import profile from "../assets/img/profile.png"
 import { Fragment } from 'react'
 
@@ -29,10 +29,15 @@ const solutions = [
 ]
 
 function Navbar () {
-    const [isDialogOpen, setDialogOpen] = useState(false);
+    const [isSearchOpen, setSearchOpen] = useState(false);
 
-    const openDialog = () => setDialogOpen(true);
-    const closeDialog = () => setDialogOpen(false);
+    const handleSearchClick = () => {
+        setSearchOpen(true);
+    };
+
+    const handleCloseSearch = () => {
+        setSearchOpen(false);
+    };
     return (
         <>
         <section className='body-font font-nunito w-screen h-[100px] bg-primary'>
@@ -89,8 +94,8 @@ function Navbar () {
                   </div>
                   <div className='flex space-x-4'>
                     <div className='hidden lg:flex cursor-pointer items-center'>
-                        <BiSearchAlt color='#111111' fontSize="36px" className='' onClick={openDialog}/>
-                        <SearchDialog isOpen={isDialogOpen} onClose={closeDialog} />
+                        <BiSearchAlt color='#111111' fontSize="36px" className='' onClick={handleSearchClick}/>
+                        {isSearchOpen && <SearchComponent onClose={handleCloseSearch} />}
                     </div>
                     <div className='hidden lg:flex bg-putih rounded-full'>
                         <Link to="/profile">

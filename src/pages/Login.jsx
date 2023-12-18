@@ -4,21 +4,34 @@ import bg from "../assets/img/bg.png"
 import logo from "../assets/img/Logo.png"
 import axios from "axios";
 import Swal from "sweetalert2";
+import {
+    setPending,
+    setFulfilled,
+    setRejected,
+    resetState,
+  } from "../features/authSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [isLogin, setLogin] = useState(false);
+    const [isLogined, setLogined] = useState(false);
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const { isLoading, isError, isLogin, message } = useSelector(
+      (state) => state.auth
+    );
 
     useEffect(() => {
-        if (isLogin) {
+        if (isLogined) {
           navigate('/');
         }
-      }, [isLogin, navigate]);
-
-    const handleLogin = async () => {
+    }, [isLogined, navigate]);
+    
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        dispatch(setPending());
         try {
             if ( !isValidEmail(email)|| !password) {
                 setError('Harap isi semua kolom dengan benar.');
@@ -38,12 +51,14 @@ function Login() {
             timer: 2100,
         });
         
-            setLogin(true);
+            setLogined(true);
 
             setEmail("");
             setPassword("");
+            dispatch(setFulfilled(response.data));
         }   catch (error) {
             console.error('Error during login:', error.message);
+            dispatch(setRejected("Login Failed"));
         }
     };
 

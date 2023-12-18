@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import Navbar from '../component/Navbar';
 import Navbar2 from '../component/Navbar';
@@ -15,6 +15,8 @@ import sop from "../assets/img/sop.png"
 import { IoMdTime } from "react-icons/io";
 import { TbStarFilled } from "react-icons/tb";
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+import CardRecipe from '../component/CardRecipe';
+import axios from 'axios';
 
 
 // const popularCategory =[
@@ -23,40 +25,40 @@ import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 //         icon: "../assets/img/breakfast.png"
 //     }
 // ]
-const weeklyMeals = [
-    {
-        category: "Salad",
-        name: "Salad Buah Segar",
-        creatorName: "Dapur Amanda",
-        rating: "4.2",
-        estTime: 20,
-        photo: "/src/assets/img/salad2.png"
-    },
-    {
-        category: "Nasi Goreng",
-        name: "Nasi Goreng Udang",
-        creatorName: "Dapur Sasa",
-        rating: "4.7",
-        estTime: 30,
-        photo: "/src/assets/img/nasi-goreng-udang.png"
-    },
-    {
-        category: "Soto Daging",
-        name: "Soto Betawi",
-        creatorName: "Dapur Ika",
-        rating: "4.8",
-        estTime: 45,
-        photo: "/src/assets/img/soto-betawi.png"
-    },
-    {
-        category: "Bakso",
-        name: "Bakso Daging Sapi",
-        creatorName: "Dapur Rere",
-        rating: "4.6",
-        estTime: 75,
-        photo: "/src/assets/img/bakso.png"
-    },
-]
+// const weeklyMeals = [
+//     {
+//         category: "Salad",
+//         name: "Salad Buah Segar",
+//         creatorName: "Dapur Amanda",
+//         rating: "4.2",
+//         estTime: 20,
+//         photo: "/src/assets/img/salad2.png"
+//     },
+//     {
+//         category: "Nasi Goreng",
+//         name: "Nasi Goreng Udang",
+//         creatorName: "Dapur Sasa",
+//         rating: "4.7",
+//         estTime: 30,
+//         photo: "/src/assets/img/nasi-goreng-udang.png"
+//     },
+//     {
+//         category: "Soto Daging",
+//         name: "Soto Betawi",
+//         creatorName: "Dapur Ika",
+//         rating: "4.8",
+//         estTime: 45,
+//         photo: "/src/assets/img/soto-betawi.png"
+//     },
+//     {
+//         category: "Bakso",
+//         name: "Bakso Daging Sapi",
+//         creatorName: "Dapur Rere",
+//         rating: "4.6",
+//         estTime: 75,
+//         photo: "/src/assets/img/bakso.png"
+//     },
+// ]
 
 const weeklyDrinks = [
     {
@@ -90,33 +92,6 @@ const weeklyDrinks = [
         rating: "4.8",
         estTime: 15,
         photo: "/src/assets/img/es-teh.png"
-    },
-]
-
-const collection = [
-    {
-        name: "KUMPULAN RESEP SALAD SEGAR",
-        by: "Dapur Amanda",
-        total: 15,
-        photo: "/src/assets/img/salad.png"
-    },
-    {
-        name: "KUMPULAN RESEP SOTO DAGING",
-        by: "Dapur Amanda",
-        total: 63,
-        photo: "/src/assets/img/soto.png"
-    },
-    {
-        name: "KUMPULAN RESEP NASI GORENG",
-        by: "Dapur Amanda",
-        total: 240,
-        photo: "/src/assets/img/nasi-goreng.png"
-    },
-    {
-        name: "KUMPULAN RESEP BAKSO DAGING",
-        by: "Dapur Amanda",
-        total: 106,
-        photo: "/src/assets/img/bakso2.png"
     },
 ]
 
@@ -188,11 +163,34 @@ const newRecipe = [
 ]
 
 function Homepage() {
+    useEffect(() => {
+        getRecipe();
+      }, []);
+    const [recipes, setRecipes] = useState([]);
+    
+    const getRecipe = async () => {
+        try {
+            const response = await axios.get("https://api.recepin.my.id/api/recipe/6");
+            const apiRecipes = response.data;
+            const recipesArray = Object.values(apiRecipes);
+            setRecipes(recipesArray);
+            // if (Array.isArray(apiRecipes)) {
+            //     setRecipes(apiRecipes);
+            // } else {
+            //     // Jika bukan array, coba konversi objek menjadi array
+            //     const recipesArray = Object.values(apiRecipes);
+            //     setRecipes(recipesArray);
+            // }
+        } catch (error) {
+          console.log(error);
+        }
+    }; 
     const [isLiked, setIsLiked] = useState(false);
 
     const handleLikeClick = () => {
         setIsLiked((prevIsLiked) => !prevIsLiked);
     }
+    window.scrollTo(0, 0);
     return (
         <>
         <section className='body-font font-nunito w-screen h-full'>
@@ -274,33 +272,20 @@ function Homepage() {
             <div className='mb-16'>
                 <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Rekomendasi Makanan Mingguan</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
-                {weeklyMeals.map((weeklyMeals) => (
-                    
-                    <div className='rounded-[8px] border-2 border-[#B3B3B3] bg-white w-[323px] h-[400px] shadow-xl '>
-                        <Link to="/detail"><img src={weeklyMeals.photo} className='rounded-[8px] w-[323px] h-[180px]'/></Link>
-                        <div className='ml-[268px] -mt-[176px] relative z-20'>
-                        <button className={`w-[44px] h-[44px] rounded-full cursor-pointer bg-primary items-center py-2.5 px-2.5 ${
-                            isLiked ? 'text-red-500' : 'text-font'}`}
-                            onClick={handleLikeClick}
-                            >
-                            {isLiked ? <AiFillHeart fontSize="24px"/> : <AiOutlineHeart fontSize='24px'/>}
-                        </button>
-                        </div>
-                        <Link to="/detail">
-                        <p className='text-secondary text-[16px] font-bold ml-5 mt-[145px]'>{weeklyMeals.category}</p>
-                        <p className='text-font text-[26px] font-bold ml-5'>{weeklyMeals.name}</p>
-                        <Link to="/viewprofile"><p className='text-[#4D4D4D] text-[18px] font-light ml-5'>Oleh {weeklyMeals.creatorName}</p></Link>
-                        <div className='inline-flex mt-[74px] ml-4'>
-                            <IoMdTime color='#AAAAAA' fontSize="24px" />
-                            <p className='text-[18px] font-light text-[#4D4D4D]'>{weeklyMeals.estTime} mnt</p>
-                            <TbStarFilled color='gold' fontSize="24px" className='ml-4'/>
-                            <p className='text-[18px] font-light text-[#4D4D4D] ml-1'>{weeklyMeals.rating}</p>
-                        </div>
-                        </Link>
-                    </div>
-                ))}
+                    {recipes.map((recipe) => (
+                        <CardRecipe
+                            key={recipe.id}
+                            image={recipe.image}
+                            category={recipe.category_name}
+                            name={recipe.name}
+                            creator={recipe.user_username}
+                            est={recipe.estimate}
+                            rating={recipe.rating}
+                        />
+                    ))}
                 </div>
             </div>
+            
             <div className='mb-16'>
                 <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Rekomendasi Minuman Mingguan</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
@@ -329,24 +314,6 @@ function Homepage() {
                         </Link>
                     </div>
                 ))}
-                </div>
-            </div>
-
-            <div className='mb-16'>
-                <p className='text-font font-extrabold text-[48px] ml-12'>Koleksi Resep</p>
-                <div className='grid grid-cols-2 gap-x-4 px-5 ml-2'>
-                    {collection.map((collection) => (
-                    <div className='rounded-[8px] bg-primary w-[646px] h-[470px] shadow-2xl mt-8'>
-                        <img src={collection.photo} className='rounded-[8px]'/>
-                        <p className='text-font text-[30px] w-[428px] font-bold mt-4 ml-5'>{collection.name}</p>
-                        <div className='inline-flex'>
-                            <Link to="/viewprofile"><p className='text-[#4D4D4D] text-[20px] ml-5 mt-8'>Oleh {collection.by}</p></Link>
-                            <div className='border border-[#3F5D97] w-[123px] h-[40px] rounded-[4px] mt-7 ml-72'>
-                            <p className='text-[#3F5D97] text-[16px] font-bold text-center mt-2'>{collection.total} Resep</p>
-                            </div>
-                        </div>
-                    </div>
-                    ))}
                 </div>
             </div>
 

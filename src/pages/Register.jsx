@@ -14,6 +14,8 @@ function Register() {
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const [isCheckboxChecked, setCheckboxChecked] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [isError, setIsError] = useState(false);
 
     useEffect(() => {
         if (isRegistered) {
@@ -21,7 +23,9 @@ function Register() {
         }
       }, [isRegistered, navigate]);
 
-    const handleRegister = async () => {
+    const handleRegister = async (e) => {
+        e.preventDefault();
+        setIsLoading(true);
         try {
             // Validasi Input
             if (!username || !password || !isValidEmail(email) ) {
@@ -29,7 +33,7 @@ function Register() {
                 return;
             }
             if ( password !== confPasword ) {
-                setError('Password tidak sama dengan Konfirmasi Password');
+                setError('Kata Sandi tidak sama dengan Konfirmasi Kata Sandi');
                 return;
             }
             if ( !isCheckboxChecked ) {
@@ -58,8 +62,12 @@ function Register() {
             setEmail("");
             setPassword("");
             setConfPassword("");
+            setIsLoading(false);
+            setIsError(false);
         }   catch (error) {
             console.error('Error during register:', error.message);
+            setIsLoading(false);
+            setIsError(true);
         }
     };
 

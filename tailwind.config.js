@@ -12,7 +12,8 @@ export default {
         font: '#111111',
         field: '#E6E6E6',
         putih: '#FFFEFE',
-        abu: '#4D4D4D'
+        abu: '#4D4D4D',
+        error: '#CE272C'
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],

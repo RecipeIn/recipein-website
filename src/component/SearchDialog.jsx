@@ -1,67 +1,62 @@
-import React, { useState, useRef, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import '../SearchDialog.css';
-import AdvancedSearchDialog from './AdvancedSearchDialog';
-import { Link } from "react-router-dom";
+// SearchComponent.js
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import AdvancedSearchComponent from './AdvancedSearchDialog';
 
-const SearchDialog = ({ isOpen, onClose }) => {
-  const dialogRef = useRef(null);
-  const [keyword, setKeyword] = useState('');
+const SearchComponent = ({ onClose }) => {
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const handleSearch = () => {
-    console.log('Pencarian:', keyword);
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const [isSearchOpen, setSearchOpen] = useState(false);
+
+    const handleSearchClick = () => {
+        setSearchOpen(true);
+    };
+
+    const handleCloseSearch = () => {
+        setSearchOpen(false);
+    };
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+
+    console.log('Melakukan pencarian untuk:', searchTerm);
     onClose();
   };
 
-  const handleClickOutside = (e) => {
-    if (dialogRef.current && !dialogRef.current.contains(e.target)) {
-      onClose();
-    }
-  };
-
-  const [isDialogOpen, setDialogOpen] = useState(false);
-
-    const openDialog = () => setDialogOpen(true);
-    const closeDialog = () => setDialogOpen(false);
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [dialogRef]);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
-
-    return () => {
-      document.body.classList.remove('overflow-hidden');
-    };
-  }, [isOpen]);
-
   return (
-    <div className={`search-dialog ${isOpen ? 'block' : 'hidden'}`}>
-      <div className="dialog px-4 pt-6 pb-2" ref={dialogRef}>
-        <h2 className='text-font font-medium text-lg mb-1'>Mau cari resep apa?</h2>
-        <input type="text" placeholder="Kata kunci" className='rounded-[10px] border-2 border-font' value={keyword} onChange={(e) => setKeyword(e.target.value)}/>
+    <div className="fixed top-[100px] left-0 right-0 z-50 flex items-center justify-center">
+      <form onSubmit={handleSearchSubmit} className="bg-white p-4 rounded-md">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          placeholder="Mau cari resep apa?"
+          className="border border-gray-300 px-3 py-2 w-[300px] rounded-md focus:outline-none focus:ring focus:border-blue-300"
+        />
         <Link to="/sresult">
-          <button className='ml-8 p-[10px] w-1/5 bg-primary text-black border-none rounded-[8px]' onClick={handleSearch}>Cari</button>
+        <button
+          type="submit"
+          className="bg-primary w-[100px] text-white w px-4 py-2 rounded-md ml-2"
+        >
+          Cari
+        </button>
         </Link>
-        <button className='bg-white border-none focus:outline-none mt-2 text-blue-500 text-lg font-medium ml-[355px] px-1 py-1' onClick={openDialog}>Pencarian Lanjutan</button>
-        <AdvancedSearchDialog isOpen={isDialogOpen} onClose={closeDialog} />
-      </div>
+        <button
+          type="submit"
+          onClick={close}
+          className="bg-error w-[100px] text-white w px-4 py-2 rounded-md ml-2"
+        >
+          Tutup
+        </button>
+        <p className='mt-2 text-end text-[#3F5D97]' onClick={handleSearchClick}>Pencarian Lanjutan</p>
+        {isSearchOpen && <AdvancedSearchComponent onClose={handleCloseSearch} />}
+      </form>
     </div>
   );
 };
 
-SearchDialog.propTypes = { 
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-};
-
-export default SearchDialog;
+export default SearchComponent;
