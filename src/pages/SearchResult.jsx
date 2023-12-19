@@ -44,20 +44,19 @@ function SearchResult () {
             </div>
             )}
             <div className='mb-16'>
-            
-            <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
-                {recipes.map((recipe) => (
-                    <CardRecipe
-                        key={recipe.id}
-                        image={recipe.image}
-                        category={recipe.category_name}
-                        name={recipe.name}
-                        creator={recipe.user_username}
-                        est={recipe.preparation_time + recipe.cooking_time}
-                        rating={recipe.rating}
-                    />
-                ))}
-            </div>
+                <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
+                    {recipes.map((recipe) => (
+                        <CardRecipe
+                            key={recipe.id}
+                            image={recipe.image}
+                            category={recipe.category_name}
+                            name={recipe.name}
+                            creator={recipe.user_username}
+                            est={recipe.preparation_time + recipe.cooking_time}
+                            rating={recipe.rating}
+                        />
+                    ))}
+                </div>
             </div>
             <Footer/>
         </section>
