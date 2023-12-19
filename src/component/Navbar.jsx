@@ -38,6 +38,7 @@ function Navbar () {
     const handleCloseSearch = () => {
         setSearchOpen(false);
     };
+    const resetKeyword = localStorage.setItem('keyword', "")
     return (
         <>
         <section className='body-font font-nunito w-screen h-[100px] bg-primary'>
@@ -70,6 +71,7 @@ function Navbar () {
                                 <a
                                     key={item.name}
                                     href={item.href}
+                                    onClick={resetKeyword}
                                     className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out focus:outline-none focus-visible:ring focus-visible:ring-orange-500/50"
                                 >
                                     <div className="ml-4">
@@ -87,9 +89,9 @@ function Navbar () {
                     )}
                 </Popover>
                 <div className="hidden lg:flex space-x-8">
-                      <Link to="/" className="text-[20px] text-font font-bold hover:text-font">BERANDA</Link>
-                      <Link to="/recipe" className="text-[20px] text-font font-bold hover:text-font">RESEP</Link>
-                      <Link to="/about" className="text-[20px] text-font font-bold hover:text-font">TENTANG KAMI</Link>
+                      <Link to="/" onClick={resetKeyword} className="text-[20px] text-font font-bold hover:text-font">BERANDA</Link>
+                      <Link to="/recipe" onClick={resetKeyword} className="text-[20px] text-font font-bold hover:text-font">RESEP</Link>
+                      <Link to="/about" onClick={resetKeyword} className="text-[20px] text-font font-bold hover:text-font">TENTANG KAMI</Link>
                   </div>
                   <div className='flex space-x-4'>
                     <div className='hidden lg:flex cursor-pointer items-center'>
