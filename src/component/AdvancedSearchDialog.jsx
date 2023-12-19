@@ -21,9 +21,9 @@ const AdvancedSearchComponent = ({ onClose }) => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem('keyword', searchKeyword)
-    localStorage.setItem('keyword1', searchKeyword1)
-    localStorage.setItem('keyword2', searchKeyword2)
+    localStorage.setItem('keyword2', searchKeyword)
+    localStorage.setItem('keyword3', searchKeyword1)
+    localStorage.setItem('keyword4', searchKeyword2)
     navigate(`/saresult`)
 
     console.log('Melakukan pencarian untuk:', searchKeyword, searchKeyword1, searchKeyword2);

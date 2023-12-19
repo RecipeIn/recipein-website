@@ -8,9 +8,9 @@ import CardRecipe from '../component/CardRecipe';
 
 function AdvancedSearchResult() {
     const [recipes, setRecipes] = useState([]);
-    const searchKeyword = localStorage.getItem('keyword')
-    const searchKeyword1 = localStorage.getItem('keyword1')
-    const searchKeyword2 = localStorage.getItem('keyword2')
+    const searchKeyword = localStorage.getItem('keyword2')
+    const searchKeyword1 = localStorage.getItem('keyword3')
+    const searchKeyword2 = localStorage.getItem('keyword4')
     useEffect(() => {
           getRecipes();
     }, [searchKeyword, searchKeyword1, searchKeyword2]);
@@ -24,13 +24,19 @@ function AdvancedSearchResult() {
 
             const recipesArray = Object.values(apiRecipes);
             const ingredientsArray = Object.values(apiIngredients);
-            const filteredRecipes = recipesArray.filter((data) => {
-                data.name.toLowerCase().includes(searchKeyword.toLowerCase());
-                ingredientsArray.filter((data) => {
-                    return data.ingredient_name.toLowerCase().includes(searchKeyword1.toLowerCase());
-                });
-            });
-            setRecipes(filteredRecipes)
+
+            const includeIngredient = searchKeyword1.split(",").filter(Boolean)
+            const excludeIngredient = searchKeyword2.split(",").filter(Boolean)
+
+            const filteredIncludeIngredient = ingredientsArray.filter(ingredient => includeIngredient.includes(ingredient.ingredient_name))
+            const filteredExcludeIngredient = ingredientsArray.filter(ingredient => excludeIngredient.includes(ingredient.ingredient_name))
+
+            const filteredRecipes = recipesArray.filter(recipe => recipe.name.toLowerCase().includes("nasi"))
+            const includeFilteredRecipes = includeIngredient.length > 0 ? 
+                filteredRecipes.filter(recipe => filteredIncludeIngredient.some(ingredient => ingredient.recipe_id === recipe.id)): filteredRecipes
+            const excludeFilteredRecipes = excludeIngredient.length > 0 ? 
+                includeFilteredRecipes.filter(recipe => !filteredExcludeIngredient.some(ingredient => ingredient.recipe_id === recipe.id)): includeFilteredRecipes
+            setRecipes(excludeFilteredRecipes)
         } catch (error) {
           console.log(error);
         }
