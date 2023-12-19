@@ -111,7 +111,7 @@ function Recipe() {
             <div className='mb-16'>
                 <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Resep Terbaru</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
-                    {console.log(recipes2)}
+                    {/* {console.log(recipes2)} */}
                     {recipes2.map((recipe) => (
                         <CardRecipe
                             key={recipe.id}
@@ -128,7 +128,7 @@ function Recipe() {
             <div className='mb-16'>
                 <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Rekomendasi Makanan Mingguan</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
-                    {console.log(recipes)}
+                    {/* {console.log(recipes)} */}
                     {recipes.map((recipe) => (
                         <CardRecipe
                             key={recipe.id}
@@ -145,7 +145,7 @@ function Recipe() {
             <div className='mb-16'>
                 <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Rekomendasi Minuman Mingguan</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
-                    {console.log(recipes1)}
+                    {/* {console.log(recipes1)} */}
                     {recipes1.map((recipe) => (
                         <CardRecipe
                             key={recipe.id}
@@ -162,7 +162,7 @@ function Recipe() {
             <div className='mb-16'>
                 <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Aneka Sup</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
-                    {console.log(recipes3)}
+                    {/* {console.log(recipes3)} */}
                     {recipes3.map((recipe) => (
                         <CardRecipe
                             key={recipe.id}
@@ -179,7 +179,7 @@ function Recipe() {
             <div className='mb-16'>
                 <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Aneka Seblak</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
-                    {console.log(recipes4)}
+                    {/* {console.log(recipes4)} */}
                     {recipes4.map((recipe) => (
                         <CardRecipe
                             key={recipe.id}
