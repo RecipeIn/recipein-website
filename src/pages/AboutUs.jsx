@@ -35,39 +35,41 @@ function AboutUs() {
           <div>
             
           </div>
-          <div className="grid grid-cols-3 gap-x-8 ml-12 mb-20">
-            {/* Card 01 */}
-            <div className="bg-primary inline-block w-[394px] rounded-[16px] shadow-lg">
-              <img className="w-full" src={card1} alt="Gambar" />
+          <div className="flex justify-center">
+            <div className="grid grid-cols-3 gap-x-8 px-12 mb-20">
+              {/* Card 01 */}
+              <div className="bg-primary inline-block w-[394px] rounded-[16px] shadow-lg">
+                <img className="w-full" src={card1} alt="Gambar" />
 
-              <div className="px-6 py-4">
-                <div className="mt-3 text-center font-bold text-[24px] mb-2 text-font">Koleksi Resep Beragam</div>
-                <p className="text-[18px] tracking-wide">RecipeIn menawarkan akses ke berbagai resep kuliner, dari makanan sehari-hari hingga kreasi unik.</p>
+                <div className="px-6 py-4">
+                  <div className="mt-3 text-center font-bold text-[24px] mb-2 text-font">Koleksi Resep Beragam</div>
+                  <p className="text-[18px] tracking-wide">RecipeIn menawarkan akses ke berbagai resep kuliner, dari makanan sehari-hari hingga kreasi unik.</p>
+                </div>
               </div>
-            </div>
-            {/* End Card 01 */}
+              {/* End Card 01 */}
 
-            {/* Card 02 */}
-            <div class=" bg-primary inline-block w-[394px] rounded-[16px] shadow-lg">
-              <img className="w-full" src={card2} alt="Gambar" />
+              {/* Card 02 */}
+              <div class=" bg-primary inline-block w-[394px] rounded-[16px] shadow-lg">
+                <img className="w-full" src={card2} alt="Gambar" />
 
-              <div className="px-6 py-4">
-                <div className="mt-3 text-center font-bold text-[24px] mb-2 text-font">Info Nutrisi Lengkap</div>
-                <p className="text-[18px] tracking-wide ">Setiap resep dilengkapi dengan informasi nutrisi dan gizi, membantu Anda membuat pilihan makanan yang lebih sehat.</p>
+                <div className="px-6 py-4">
+                  <div className="mt-3 text-center font-bold text-[24px] mb-2 text-font">Info Nutrisi Lengkap</div>
+                  <p className="text-[18px] tracking-wide ">Setiap resep dilengkapi dengan informasi nutrisi dan gizi, membantu Anda membuat pilihan makanan yang lebih sehat.</p>
+                </div>
               </div>
-            </div>
-            {/* End Card 02 */}
+              {/* End Card 02 */}
 
-            {/* Card 03 */}
-            <div class="bg-primary inline-block w-[394px] rounded-[16px] shadow-lg">
-              <img className="w-full" src={card3} alt="Gambar" />
+              {/* Card 03 */}
+              <div class="bg-primary inline-block w-[394px] rounded-[16px] shadow-lg">
+                <img className="w-full" src={card3} alt="Gambar" />
 
-              <div className="px-6 py-4">
-                <div className="mt-3 text-center font-bold text-[24px] mb-2 text-font">Tambahkan Resep Pribadi</div>
-                <p className="text-[18px] tracking-wide">Bukan hanya tempat mencari resep, RecipeIn memungkinkan Anda berbagi kreasi kuliner pribadi dengan komunitas.</p>
+                <div className="px-6 py-4">
+                  <div className="mt-3 text-center font-bold text-[24px] mb-2 text-font">Tambahkan Resep Pribadi</div>
+                  <p className="text-[18px] tracking-wide">Bukan hanya tempat mencari resep, RecipeIn memungkinkan Anda berbagi kreasi kuliner pribadi dengan komunitas.</p>
+                </div>
               </div>
+              {/* End Card 03 */}
             </div>
-            {/* End Card 03 */}
           </div>
         </div>
         <Footer />

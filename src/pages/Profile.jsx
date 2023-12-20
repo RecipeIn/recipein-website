@@ -139,7 +139,7 @@ function EditProfile() {
                             {apiProfile && (
                                 <div>
                                     {apiProfile.avatar ? (
-                                        <img src={apiProfile.avatar} className='w-[90px] h-[90px] rounded-full ml-8 mt-8' alt="User Avatar" />
+                                        <img src={apiProfile.avatar} className='w-[250px] h-[250px] rounded-none mt-8' alt="User Avatar" />
                                     ) : (
                                         <div>
                                             &nbsp;
