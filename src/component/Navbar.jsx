@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import logo from '../assets/img/Logo.png'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Popover, Transition } from '@headlessui/react'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { BiSearchAlt } from "react-icons/bi";
@@ -8,6 +8,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import SearchComponent from './SearchDialog';
 import profile from "../assets/img/profile.png"
 import { Fragment } from 'react'
+import { useSelector } from "react-redux";
 
 const solutions = [
     {
@@ -30,6 +31,7 @@ const solutions = [
 
 function Navbar () {
     const [isSearchOpen, setSearchOpen] = useState(false);
+    const navigate = useNavigate();
 
     const handleSearchClick = () => {
         setSearchOpen(true);
@@ -44,6 +46,11 @@ function Navbar () {
         localStorage.setItem('keyword3', "");
         localStorage.setItem('keyword4', "");
     };
+    const handleLogin = () => {
+        navigate("/login");
+    }
+
+    const { isLogin } = useSelector((state) => state.auth);
     return (
         <>
         <section className='body-font font-nunito w-screen h-[100px] bg-primary'>
@@ -103,13 +110,24 @@ function Navbar () {
                         <BiSearchAlt color='#111111' fontSize="36px" className='' onClick={handleSearchClick}/>
                         {isSearchOpen && <SearchComponent onClose={handleCloseSearch} />}
                     </div>
-                    <div className='hidden lg:flex bg-putih rounded-full'>
-                        <Link to="/profile">
-                            <AiOutlineUser color='#111111' fontSize="50px" className='py-2 px-2'/>
+                    <div>
+                        
+                        {isLogin ? (
+                            <Link to="/profile">
+                            <div className='hidden lg:flex bg-putih rounded-full'>
+                            <AiOutlineUser color='#111111' fontSize="50px" className='py-1 px-1'/>
                             {/* <img className=" w-[50px] h-[50px] rounded-full" src={profile} alt=""/> */}
-                        </Link>
+                            </div>
+                            </Link>
+                        ) : (
+                            <div className="text-font font-medium text-lg bg-white w-[110px] rounded-xl inline-flex cursor-pointer" onClick={handleLogin}>
+                                <AiOutlineUser color='#111111' fontSize="40px" className='py-1 px-1'/>
+                                <p className='text-center py-2 px-2'>Login</p>
+                            </div>
+                        )}
+                        
                     </div>
-                  </div>
+                </div>
 
             </div>
 
