@@ -5,7 +5,7 @@ const CardCategory = (props) => {
     return (
         <div className='flex flex-col text-center'>
             <Link to="/dcategory">
-            <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl flex justify-center p-6'>
+            <div className='w-[154px] h-[154px] rounded-full bg-white shadow-2xl flex justify-center p-7'>
                 <img src={image}/>
             </div>
             <div>
