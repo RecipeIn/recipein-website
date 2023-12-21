@@ -64,7 +64,7 @@ function AddRecipe () {
                             </div>
                         </div>
                         <div className='flex flex-col ml-44'>
-                            <p className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Foto (maksimal 8)</p>
+                            <p className="block text-[18px] font-bold justify-center pb-2 tracking-wider">Foto (maksimal 1)</p>
                             <div className='w-[180px] h-[132px] bg-primary rounded-[8px] flex justify-center py-5'>
                                 <label htmlFor="fileInput" className="cursor-pointer">
                                     <TbCameraPlus size='60px' className='ml-6' color='#1E2C48'/>
@@ -81,14 +81,10 @@ function AddRecipe () {
 
                     <p className='text-font font-extrabold text-[26px] mt-12 ml-12 mb-4'>Bahan-bahan</p>
                     <hr className="border-[1px] border-[#979797] mb-12" />
-                    <div className='flex justify-end mr-4'>
-                        <button className='w-[202px] h-[38px] bg-primary mr-8 text-font font-bold text-[16px] py-1'>Tambah Jenis Bahan</button>
-                    </div>
 
                     <div className='flex justify-between'>
                         <div>
                             <div className='flex flex-col ml-12'>
-                                <p className='text-[22px] font-bold tracking-wide text-font'>Saus</p>
                                 <div className='inline-flex'>
                                     <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" placeholder="Bahan" required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" placeholder="0" required></input>
@@ -114,7 +110,6 @@ function AddRecipe () {
                         </div>
                         <div className='mr-12'>
                             <div className='flex flex-col ml-12'>
-                                <p className='text-[22px] font-bold tracking-wide text-font'>Salad</p>
                                 <div className='inline-flex'>
                                     <input type="text" className="bg-white w-[300px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3]" placeholder="Bahan" required></input>
                                     <input type="text" className="bg-white w-[80px] h-[50px] tracking-wider text-base border border-black rounded-[10px] focus:ring-black-500 focus:border-black-500 block px-6 py-3 text-font placeholder-[#B3B3B3] ml-2" placeholder="0" required></input>
@@ -138,7 +133,7 @@ function AddRecipe () {
                     <p className='text-font font-extrabold text-[26px] mt-12 ml-12 mb-4'>Langkah-langkah</p>
                     <hr className="border-[1px] border-[#979797] mb-12" />
                     <div className='flex justify-end mr-4'>
-                        <button className='w-[202px] h-[38px] bg-primary mr-8 text-font font-bold text-[16px] py-1'>Tambah Jenis Bahan</button>
+                        <button className='w-[202px] h-[38px] bg-primary mr-8 text-font font-bold text-[16px] py-1'>Tambah Langkah</button>
                     </div>
 
                     <div className='flex justify-between'>
