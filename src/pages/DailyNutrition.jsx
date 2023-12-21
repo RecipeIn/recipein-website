@@ -101,7 +101,6 @@ function DailyNutrition() {
     
     const updateProfile = async () => {
         if (gender === 'default') {
-            console.log('Please select a valid gender.');
             Swal.fire({
                 icon: 'error',
                 title: 'Gagal Memperbarui Profile!',
@@ -111,7 +110,6 @@ function DailyNutrition() {
             return; 
         } else {
             if ( activity === 'default') {
-                console.log('Please select a valid gender.');
                 Swal.fire({
                     icon: 'error',
                     title: 'Gagal Memperbarui Profile!',

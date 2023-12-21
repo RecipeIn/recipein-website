@@ -57,8 +57,6 @@ function Login() {
             const data = await response.json();
             const { access_token } = data;
             saveTokenToLocalstorage(access_token);
-            console.log('Login berhasil,', 'Access token saved:', access_token);
-
 
             Swal.fire({
             icon: "success",
