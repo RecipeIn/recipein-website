@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import logo from '../assets/img/Logo.png'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Popover, Transition } from '@headlessui/react'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { BiSearchAlt } from "react-icons/bi";
 import { AiOutlineUser } from "react-icons/ai";
-import SearchDialog from './SearchDialog';
+import SearchComponent from './SearchDialog';
 import profile from "../assets/img/profile.png"
 import { Fragment } from 'react'
+import { useSelector } from "react-redux";
 
 const solutions = [
     {
@@ -19,20 +20,37 @@ const solutions = [
         href: '/recipe',
     },
     {
-        name: 'Menu Sehat',
-        href: '/diet',
-    },
-    {
         name: 'Tentang',
         href: '/about',
+    },
+    {
+        name: 'Profile',
+        href: '/profile',
     },
 ]
 
 function Navbar () {
-    const [isDialogOpen, setDialogOpen] = useState(false);
+    const [isSearchOpen, setSearchOpen] = useState(false);
+    const navigate = useNavigate();
 
-    const openDialog = () => setDialogOpen(true);
-    const closeDialog = () => setDialogOpen(false);
+    const handleSearchClick = () => {
+        setSearchOpen(true);
+    };
+
+    const handleCloseSearch = () => {
+        setSearchOpen(false);
+    };
+    const handleResetKeyword = () => {
+        localStorage.setItem('keyword', "");
+        localStorage.setItem('keyword2', "");
+        localStorage.setItem('keyword3', "");
+        localStorage.setItem('keyword4', "");
+    };
+    const handleLogin = () => {
+        navigate("/login");
+    }
+
+    const { isLogin } = useSelector((state) => state.auth);
     return (
         <>
         <section className='body-font font-nunito w-screen h-[100px] bg-primary'>
@@ -65,6 +83,7 @@ function Navbar () {
                                 <a
                                     key={item.name}
                                     href={item.href}
+                                    onClick={handleResetKeyword}
                                     className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out focus:outline-none focus-visible:ring focus-visible:ring-orange-500/50"
                                 >
                                     <div className="ml-4">
@@ -82,23 +101,33 @@ function Navbar () {
                     )}
                 </Popover>
                 <div className="hidden lg:flex space-x-8">
-                      <Link to="/" className="text-[20px] text-font font-bold hover:text-font">BERANDA</Link>
-                      <Link to="/recipe" className="text-[20px] text-font font-bold hover:text-font">RESEP</Link>
-                      <Link to="/diet" className="text-[20px] text-font font-bold hover:text-font">MENU SEHAT</Link>
-                      <Link to="/about" className="text-[20px] text-font font-bold hover:text-font">TENTANG KAMI</Link>
+                      <Link to="/" onClick={handleResetKeyword} className="text-[20px] text-font font-bold hover:text-font">BERANDA</Link>
+                      <Link to="/recipe" onClick={handleResetKeyword} className="text-[20px] text-font font-bold hover:text-font">RESEP</Link>
+                      <Link to="/about" onClick={handleResetKeyword} className="text-[20px] text-font font-bold hover:text-font">TENTANG KAMI</Link>
                   </div>
                   <div className='flex space-x-4'>
                     <div className='hidden lg:flex cursor-pointer items-center'>
-                        <BiSearchAlt color='#111111' fontSize="36px" className='' onClick={openDialog}/>
-                        <SearchDialog isOpen={isDialogOpen} onClose={closeDialog} />
+                        <BiSearchAlt color='#111111' fontSize="36px" className='' onClick={handleSearchClick}/>
+                        {isSearchOpen && <SearchComponent onClose={handleCloseSearch} />}
                     </div>
-                    <div className='hidden lg:flex bg-putih rounded-full'>
-                        <Link to="/profile">
-                            {/* <AiOutlineUser color='#111111' fontSize="50px" className='py-2 px-2'/> */}
-                            <img className=" w-[50px] h-[50px] rounded-full" src={profile} alt=""/>
-                        </Link>
+                    <div>
+                        
+                        {isLogin ? (
+                            <Link to="/profile">
+                            <div className='hidden lg:flex bg-putih rounded-full'>
+                            <AiOutlineUser color='#111111' fontSize="50px" className='py-1 px-1'/>
+                            {/* <img className=" w-[50px] h-[50px] rounded-full" src={profile} alt=""/> */}
+                            </div>
+                            </Link>
+                        ) : (
+                            <div className="text-font font-medium text-lg bg-white w-[110px] rounded-xl inline-flex cursor-pointer" onClick={handleLogin}>
+                                <AiOutlineUser color='#111111' fontSize="40px" className='py-1 px-1'/>
+                                <p className='text-center py-2 px-2'>Login</p>
+                            </div>
+                        )}
+                        
                     </div>
-                  </div>
+                </div>
 
             </div>
 

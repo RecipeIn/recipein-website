@@ -168,7 +168,9 @@ function AddRecipe () {
                     </div>
 
                     <div className='flex justify-center mt-12'>
+                        <Link to="/myrecipe">
                         <button className='bg-primary w-[250px] h-[60px] text-[20px] font-bold text-font border-none'>Tambah</button>
+                        </Link>
                     </div>
                 </div>
             </div>

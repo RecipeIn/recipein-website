@@ -10,7 +10,7 @@ import IconButton from "../component/IconButton";
 import profile from "../assets/img/profile.png";
 import profile2 from "../assets/img/profile2.png";
 import profile3 from "../assets/img/profile3.png";
-import saladsgr from "../assets/img/saladsegar.png";
+import dsalad2 from "../assets/img/dsalad2.png";
 import { FaStar } from "react-icons/fa6";
 import Dropdown from "../component/Dropdown";
 import { BiLike, BiSolidLike } from "react-icons/bi";
@@ -152,12 +152,12 @@ function DetailRecipe() {
         </div>
         <div className=" w-screen ">
           <div className=" px-8">
-            <img src={saladsgr} className="w-screen h-  object fit-cover rounded-[8px]" />
+            <img src={dsalad2} className="w-screen h-  object fit-cover rounded-[8px]" />
           </div>
         </div>
 
-        <div className="flex justify-center items-center">
-          <div className="bg-[#E6E6E6] w-[1420px] h-[100px] mt-4 mb-4 inline-flex">
+        <div className='flex justify-center items-center'>
+          <div className='bg-[#E6E6E6] w-[1300px] h-[100px] mt-4 mb-4 flex justify-center'>
             <div className="flex flex-col mt-6 ml-40 text-center">
               <p className="text-[18px] font-semibold tracking-wider">Waktu Persiapan</p>
               <p className="text-[18px] tracking-wider">&#177; 10 Menit</p>
@@ -184,7 +184,6 @@ function DetailRecipe() {
           <p className="text-[30px] font-extrabold text-font ml-12">Bahan-bahan</p>
           <div className="grid grid-cols-2 ml-12">
             <div className="text-font">
-              <p className="text-[24px] font-extrabold">Saus:</p>
               {ingredients.map((ingredients) => (
                 <div className="flex mt-1">
                   <FaCircleCheck fontSize="22px" color="#FFD32D" />
@@ -194,7 +193,6 @@ function DetailRecipe() {
             </div>
 
             <div className="text-font">
-              <p className="text-[24px] font-extrabold">Salad:</p>
               {ingredients2.map((ingredients2) => (
                 <div className="flex mt-1">
                   <CiCircleCheck fontSize="22px" color="#111111" />
@@ -235,28 +233,18 @@ function DetailRecipe() {
             <hr className="border-[1px] border-font mt-1 mb-1 w-[270px]" />
             {nutritionFacts.map((nutritionFacts) => (
               <div>
-                <div className="flex justify-between">
-                  <p className="text-[18px] tracking-wide">
-                    <span className="font-bold">{nutritionFacts.kandungan} : </span>
-                    {nutritionFacts.takaran}
-                  </p>
-                  <p className="text-[18px] tracking-wide text-right">{nutritionFacts.presentase}</p>
+                <div className='flex justify-between'>
+                  <p className='text-[18px] tracking-wide'><span className='font-bold'>{nutritionFacts.kandungan} : </span>{nutritionFacts.takaran}</p>
+                  <p className='text-[18px] tracking-wide text-right'>{nutritionFacts.presentase}</p>
                 </div>
-                <hr className="border-[1px] border-font mt-1 mb-1 w-[270px]" />
+                <hr className="border-[1px] border-font mt-1 mb-1 w-[270px]"/>
               </div>
-            ))}
+              ))}
           </div>
-          <div className="ml-8 text-font">
-            <p className="text-[18px] tracking-wide w-[1000px]">
-              <span className="font-bold">* </span>Persen Nilai Harian didasarkan pada diet 2.000 kalori. Nilai harian Anda mungkin lebih tinggi atau lebih rendah tergantung pada kebutuhan kalori Anda.
-            </p>
-            <p className="text-[18px] tracking-wide w-[800px] mt-1">
-              <span className="font-bold">** </span>Informasi nutrisi tidak tersedia untuk semua bahan. Jumlahnya didasarkan pada data nutrisi yang tersedia.
-            </p>
-            <p className="text-[18px] tracking-wide w-[1000px] mt-1">
-              <span className="font-bold">*** </span>Informasi saat ini tidak tersedia untuk nutrisi ini. Jika Anda mengikuti diet ketat secara medis, silakan berkonsultasi dengan dokter atau ahli diet terdaftar sebelum menyiapkan resep ini
-              untuk konsumsi pribadi.
-            </p>
+          <div className="mr-8 text-font">
+            <p className='text-[18px] tracking-wide w-[900px]'><span className='font-bold'>* </span>Persen Nilai Harian didasarkan pada diet 2.000 kalori. Nilai harian Anda mungkin lebih tinggi atau lebih rendah tergantung pada kebutuhan kalori Anda.</p>
+            <p className='text-[18px] tracking-wide w-[800px] mt-1'><span className='font-bold'>** </span>Informasi nutrisi tidak tersedia untuk semua bahan. Jumlahnya didasarkan pada data nutrisi yang tersedia.</p>
+            <p className='text-[18px] tracking-wide w-[900px] mt-1'><span className='font-bold'>*** </span>Informasi saat ini tidak tersedia untuk nutrisi ini. Jika Anda mengikuti diet ketat secara medis, silakan berkonsultasi dengan dokter atau ahli diet terdaftar sebelum menyiapkan resep ini untuk konsumsi pribadi.</p>
           </div>
         </div>
         <p className="text-[30px] font-extrabold text-font mt-8 ml-12">Ulasan</p>
@@ -320,10 +308,6 @@ function DetailRecipe() {
                     atau sebagai penutup ringan setelah makan.
                   </p>
                 </div>
-                <div className="flex mt-4 mb-2">
-                  <BiSolidLike color="#FFD32D" fontSize="20px" />
-                  <p className="text-[14px] font-semibold text-font tracking-wider ml-2">Membantu (32)</p>
-                </div>
               </div>
             </div>
             <hr className="border-[1px] border-font mt-1 mb-1 w-[728px]" />
@@ -340,7 +324,8 @@ function DetailRecipe() {
                   <FaStar color="#FFD32D" fontSize="20px" className="ml-0.5" />
                   <p className="text-[16px] font-semibold text-font tracking-wide ml-2">16/11/2023</p>
                 </div>
-                <div className="mt-2 text-font text-[18px] tracking-wide w-[730px]">
+               </div>
+               <div className="mt-2 text-font text-[18px] tracking-wide w-[730px]">
                   <p>Tampilan salad ini sendiri sangat menggugah selera makan dengan warna-warna cerah yang memikat.</p>
                 </div>
                 <div className="flex mt-4 mb-2">
@@ -348,7 +333,6 @@ function DetailRecipe() {
                   <p className="text-[14px] font-semibold text-font tracking-wider ml-2">Membantu (0)</p>
                 </div>
               </div>
-            </div>
           </div>
         </div>
         <Footer />

@@ -6,7 +6,6 @@ import bg9 from '../assets/img/bg9.png'
 import { IoMdTime } from "react-icons/io";
 import { TbStarFilled } from "react-icons/tb";
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
-import FolderDialog from '../component/FolderDialog';
 
 const favorite = [
     {
@@ -143,12 +142,6 @@ function Favorite () {
                 <p>Tandai resep favorit, simpan ide-ide inspiratif, dan akses cepat tanpa repot. Nikmati</p>
                 <p>pengalaman memasak yang lebih terorganisir dan menyenangkan.</p>
             </div>
-            <div className='flex justify-end mb-12'>
-                <div className='flex-inline mr-20'>
-                    <button onClick={openDialog} className='bg-primary w-[135px] h-[40px] text-[16px] font-semibold text-font ml-8'>Folder</button>
-                    <FolderDialog isOpen={isDialogOpen} onClose={closeDialog} />
-                </div>
-            </div>
             <div className='mb-16'>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {favorite.map((favorite) => (
@@ -176,7 +169,6 @@ function Favorite () {
                 </div>
             </div>
             <div className='mb-16'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Sup</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {variousSoup.map((variousSoup) => (
                     
@@ -203,7 +195,6 @@ function Favorite () {
                 </div>
             </div>
             <div className='mb-16'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Minuman</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {weeklyDrinks.map((weeklyDrinks) => (
                     
