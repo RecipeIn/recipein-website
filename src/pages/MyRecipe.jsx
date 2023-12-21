@@ -218,7 +218,7 @@ function MyRecipe() {
                 </div>
             </div>
             <div className='mb-16'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Kumpulan Masakan Ayam</p>
+                
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {folderAyam.map((folderAyam) => (
                     
@@ -252,7 +252,7 @@ function MyRecipe() {
                 </div>
             </div>
             <div className='mb-16'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Kreasi Kue</p>
+               
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {folderKue.map((folderKue) => (
                     
