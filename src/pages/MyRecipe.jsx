@@ -8,7 +8,6 @@ import { TbStarFilled } from "react-icons/tb";
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { FaRegEdit } from "react-icons/fa";
 import { IoRemoveOutline } from "react-icons/io5";
-import FolderDialog from '../component/FolderDialog';
 
 const myRecipe = [
     {
@@ -142,8 +141,6 @@ function MyRecipe() {
             <div className='flex justify-end mb-12'>
                 <div className='flex-inline mr-20'>
                     <Link to='/addrecipe'><button className='bg-primary w-[135px] h-[40px] text-[16px] font-semibold text-font'>Tambah</button></Link>
-                    <button onClick={openDialog} className='bg-primary w-[135px] h-[40px] text-[16px] font-semibold text-font ml-8'>Folder</button>
-                    <FolderDialog isOpen={isDialogOpen} onClose={closeDialog} />
                 </div>
             </div>
 
@@ -218,7 +215,6 @@ function MyRecipe() {
                 </div>
             </div>
             <div className='mb-16'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Kumpulan Masakan Ayam</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {folderAyam.map((folderAyam) => (
                     
@@ -252,7 +248,6 @@ function MyRecipe() {
                 </div>
             </div>
             <div className='mb-16'>
-                <p className='text-font font-extrabold text-[48px] mt-16 mb-8 ml-12'>Kreasi Kue</p>
                 <div className='grid grid-cols-3 2xl:grid-cols-4 gap-y-8 ml-20'>
                 {folderKue.map((folderKue) => (
                     

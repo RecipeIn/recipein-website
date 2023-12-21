@@ -1,17 +1,26 @@
-import { useState } from 'react'
-import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react'
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from '../component/Navbar';
 import Footer from '../component/Footer'
 import profile from "../assets/img/profile.png"
 import { MdNavigateNext } from "react-icons/md";
 import { RiImageEditLine } from "react-icons/ri";
+import { useSelector, useDispatch } from "react-redux";
+import { resetState } from '../features/authSlice';
+import Swal from "sweetalert2";
 
 function EditProfile() {
     const [selectedFile, setSelectedFile] = useState(null);
-
+    const dispatch = useDispatch();
     const handleFileChange = (e) => {
     const file = e.target.files[0];
     setSelectedFile(file);
+    };
+
+    const handleLogout = async () => {
+        navigate("/login");
+        dispatch(resetState());
+        localStorage.setItem('access_token', "");
     };
 
     return (
@@ -53,12 +62,12 @@ function EditProfile() {
                                     <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                                 </li>
                                 <li className='bg-[#CE272C] mt-4 rounded-[8px] shadow-lg w-[250px] h-[40px] inline-flex justify-between border-none'>
-                                    <a href="/login" className="ml-4 mt-2 w-[250px] h-[40px] text-font text-[18px] font-bold hover:text-font">Keluar</a>
+                                    <a href="/login" className="ml-4 mt-2 w-[250px] h-[40px] text-font text-[18px] font-bold hover:text-font" onClick={handleLogout}>Keluar</a>
                                     <MdNavigateNext className='mt-2 mr-4' fontSize="26px" color='#111111'/>
                                 </li>
+                                <button type="submit" onClick={updateProfile} className="w-[156px] text-font bg-primary font-bold rounded-[4px] text-[16px] mt-6 px-1 py-2 text-center mx-12">Simpan Perubahan</button>
                             </ul>
                         </div>
-                        <button type="submit" className="w-[156px] text-font bg-primary font-bold rounded-[4px] text-[16px] mt-6 px-1 py-2 text-center ml-28">Simpan Perubahan</button>
                     </div>
 
                 <div className='w-[908px] h-[711px] bg-[#EDEDED] mr-12 rounded-[8px]'>

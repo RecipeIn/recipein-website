@@ -109,7 +109,7 @@ const simpleToast = [
     },
 ]
 
-function PopularCategory() {
+function DetailCategory() {
     const [isLiked, setIsLiked] = useState(false);
 
     const handleLikeClick = () => {
@@ -192,4 +192,4 @@ function PopularCategory() {
     )
 }
 
-export default PopularCategory
+export default DetailCategory
