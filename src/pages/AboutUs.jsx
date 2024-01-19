@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import header from "../assets/img/header.png";
+import header from "../assets/img/Header.png";
 import Footer from "../component/Footer.jsx";
 import Navbar from "../component/Navbar.jsx";
 import card1 from "../assets/img/card1.png";
