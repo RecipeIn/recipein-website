@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import logo from '../assets/img/logo.png'
+import logo from '../assets/img/Logo.png'
 import { Link } from "react-router-dom";
 import { BiLogoFacebook } from "react-icons/bi";
 import { BiLogoInstagram } from "react-icons/bi";
