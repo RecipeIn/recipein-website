@@ -1,4 +1,4 @@
-import logo from '../assets/img/logo.png'
+import logo from '../assets/img/Logo.png'
 import { BiLogoFacebook } from "react-icons/bi";
 import { BiLogoInstagram } from "react-icons/bi";
 import { BiLogoPinterestAlt } from "react-icons/bi";
