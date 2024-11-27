@@ -4,16 +4,14 @@ import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import { FiShare2 } from "react-icons/fi";
 import { FaCircleCheck } from "react-icons/fa6";
-import { AiOutlinePlusCircle } from "react-icons/ai";
 import { TbStarFilled } from "react-icons/tb";
 import IconButton from "../component/IconButton";
 import profile from "../assets/img/profile.png";
 import profile2 from "../assets/img/profile2.png";
 import profile3 from "../assets/img/profile3.png";
-import dsalad2 from "../assets/img/dsalad2.png";
 import { FaStar } from "react-icons/fa6";
 import Dropdown from "../component/Dropdown";
-import { BiLike, BiSolidLike } from "react-icons/bi";
+import { BiLike } from "react-icons/bi";
 import { CiCircleCheck } from "react-icons/ci";
 
 const ingredients = [
@@ -150,11 +148,11 @@ function DetailRecipe() {
           </Link>
           <p className="text-[18px] text-font tracking-wider ml-2">| Diperbarui pada 15 Agustus 2023</p>
         </div>
-        <div className=" w-screen ">
+        {/* <div className=" w-screen ">
           <div className=" px-8">
             <img src={dsalad2} className="w-screen h-  object fit-cover rounded-[8px]" />
           </div>
-        </div>
+        </div> */}
 
         <div className='flex justify-center items-center'>
           <div className='bg-[#E6E6E6] w-[1300px] h-[100px] mt-4 mb-4 flex justify-center'>
@@ -184,19 +182,19 @@ function DetailRecipe() {
           <p className="text-[30px] font-extrabold text-font ml-12">Bahan-bahan</p>
           <div className="grid grid-cols-2 ml-12">
             <div className="text-font">
-              {ingredients.map((ingredients) => (
-                <div className="flex mt-1">
+              {ingredients.map((ingredient, index) => (
+                <div key={index} className="flex mt-1">
                   <FaCircleCheck fontSize="22px" color="#FFD32D" />
-                  <p className="text-[18px] font-medium text-font tracking-wider ml-2">{ingredients.text}</p>
+                  <p className="text-[18px] font-medium text-font tracking-wider ml-2">{ingredient.text}</p>
                 </div>
               ))}
             </div>
 
             <div className="text-font">
-              {ingredients2.map((ingredients2) => (
-                <div className="flex mt-1">
+              {ingredients2.map((ingredient, index) => (
+                <div key={index} className="flex mt-1">
                   <CiCircleCheck fontSize="22px" color="#111111" />
-                  <p className="text-[18px] font-medium text-font tracking-wider ml-2">{ingredients2.text}</p>
+                  <p className="text-[18px] font-medium text-font tracking-wider ml-2">{ingredient.text}</p>
                 </div>
               ))}
             </div>
@@ -231,8 +229,8 @@ function DetailRecipe() {
             <hr className="border-[1px] border-font mt-4 w-[270px]" />
             <p className="text-[18px] tracking-wide text-right">% Nilai Harian*</p>
             <hr className="border-[1px] border-font mt-1 mb-1 w-[270px]" />
-            {nutritionFacts.map((nutritionFacts) => (
-              <div>
+            {nutritionFacts.map((nutritionFacts, index) => (
+              <div key={index}>
                 <div className='flex justify-between'>
                   <p className='text-[18px] tracking-wide'><span className='font-bold'>{nutritionFacts.kandungan} : </span>{nutritionFacts.takaran}</p>
                   <p className='text-[18px] tracking-wide text-right'>{nutritionFacts.presentase}</p>

@@ -31,7 +31,7 @@ function AdvancedSearchResult() {
             const filteredIncludeIngredient = ingredientsArray.filter(ingredient => includeIngredient.includes(ingredient.ingredient_name))
             const filteredExcludeIngredient = ingredientsArray.filter(ingredient => excludeIngredient.includes(ingredient.ingredient_name))
 
-            const filteredRecipes = recipesArray.filter(recipe => recipe.name.toLowerCase().includes("nasi"))
+            const filteredRecipes = recipesArray.filter(recipe => recipe.name.toLowerCase().includes(searchKeyword.toLowerCase()))
             const includeFilteredRecipes = includeIngredient.length > 0 ? 
                 filteredRecipes.filter(recipe => filteredIncludeIngredient.some(ingredient => ingredient.recipe_id === recipe.id)): filteredRecipes
             const excludeFilteredRecipes = excludeIngredient.length > 0 ? 

@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import faqimg from "../assets/img/faqimg.png";
@@ -43,7 +41,7 @@ function FAQ() {
           <div className="flex justify-center space-x-4">
             <div className="w-1/2 mt-7 mb-32 pt-12 p-4">
               <p className="text-[33px] text-font ml-32 MB-0 font-extrabold ">FAQ</p>
-              <p className="text-[25px] text-font ml-32 ">
+              <p className="text-[22px] text-font ml-32 ">
                 Selamat datang di halaman FAQ kami! Di sini, kami menyajikan jawaban untuk pertanyaan yang sering diajukan agar Anda dapat dengan mudah menemukan informasi yang Anda cari. Kami mengerti bahwa setiap pengalaman pengguna unik,
                 dan FAQ kami dirancang untuk memberikan panduan cepat dan jelas. Temukan jawaban untuk pertanyaan umum atau dapatkan bantuan lebih lanjut melalui saluran dukungan Hubungi Kami.
               </p>
@@ -55,8 +53,8 @@ function FAQ() {
           <div>
             <div className="w-full px-60 pt-0 pb-32">
               <div className=" w-full pt-4">
-                {dropdownfaq.map((dropdownfaq) => (
-                  <div className="mx-0 w-full rounded-2xl bg-white py-2">
+                {dropdownfaq.map((dropdownfaq, index) => (
+                  <div key={index} className="mx-0 w-full rounded-2xl bg-white py-2">
                     <Disclosure>
                       {({ open }) => (
                         <>
