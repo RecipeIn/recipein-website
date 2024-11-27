@@ -1,6 +1,4 @@
-import { useState } from 'react'
 import logo from '../assets/img/logo.png'
-import { Link } from "react-router-dom";
 import { BiLogoFacebook } from "react-icons/bi";
 import { BiLogoInstagram } from "react-icons/bi";
 import { BiLogoPinterestAlt } from "react-icons/bi";
@@ -18,7 +16,7 @@ function Footer() {
                         <img src={logo} className="h-24" alt="RecipeIn Logo" />
                         <p className='text-[38px] mt-2 ml-2 text-font font-extrabold'>RecipeIn</p>
                     </a>
-                    <p className='text-2xl text-font pt-4 italic tracking-wider'>"Temukan, Masak, Nikmati"</p>
+                    <p className='text-2xl text-font pt-4 italic tracking-wider'>&quot;Temukan, Masak, Nikmati&quot;</p>
                 </div>
                 <div className="grid grid-cols-2 gap-8 sm:gap-12 sm:grid-cols-2 mt-8 text-font">
                     <div>
@@ -49,7 +47,7 @@ function Footer() {
                         </h2>
                         <ul className="">
                             <li className="mb-2">
-                                <a href="/reci[e" className="text-font text-[18px] hover:text-font">Resep</a>
+                                <a href="/recipe" className="text-font text-[18px] hover:text-font">Resep</a>
                             </li>
                             <li className="mb-2">
                                 <a href="/profile" className="text-font text-[18px] hover:text-font">Profile</a>
